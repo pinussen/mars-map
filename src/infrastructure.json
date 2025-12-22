@@ -1,0 +1,142 @@
+[
+  {
+    "name": "Space Elevator Cable",
+    "type": "cable",
+    "coordinates": [
+      [0.0, -132.58],
+      [0.0, -132.58]
+    ],
+    "description": "Remains of the fallen space elevator from Pavonis Mons",
+    "book": "Green Mars",
+    "color": "#ff0000",
+    "style": "dashed"
+  },
+  {
+    "name": "Trans-Martian Railway",
+    "type": "railway",
+    "coordinates": [
+      [0.0, -132.58],
+      [22.5, 49.97],
+      [18.65, -133.8],
+      [-14.0, -85.0]
+    ],
+    "description": "Main railway connecting Sheffield, Burroughs, Olympus Mons, and Sabishii",
+    "book": "Blue Mars",
+    "color": "#333333",
+    "style": "solid"
+  },
+  {
+    "name": "Northern Ocean Railway",
+    "type": "railway",
+    "coordinates": [
+      [70.0, 0.0],
+      [45.0, -22.0],
+      [50.0, 117.0],
+      [35.0, 158.0]
+    ],
+    "description": "Railway connecting northern ocean ports",
+    "book": "Blue Mars",
+    "color": "#333333",
+    "style": "solid"
+  },
+  {
+    "name": "Valles Marineris Highway",
+    "type": "road",
+    "coordinates": [
+      [-7.0, -100.0],
+      [-7.0, -85.0],
+      [-10.0, -72.0],
+      [-13.0, -61.0],
+      [-14.0, -59.0]
+    ],
+    "description": "Major highway through the grand canyon system",
+    "book": "Blue Mars",
+    "color": "#8B4513",
+    "style": "solid"
+  },
+  {
+    "name": "Tharsis Ring Road",
+    "type": "road",
+    "coordinates": [
+      [18.65, -133.8],
+      [11.9, -104.5],
+      [0.0, -112.8],
+      [-9.0, -121.0],
+      [18.65, -133.8]
+    ],
+    "description": "Circular highway connecting the major Tharsis volcanoes",
+    "book": "Blue Mars",
+    "color": "#8B4513",
+    "style": "solid"
+  },
+  {
+    "name": "Hellas Sea Coastal Road",
+    "type": "road",
+    "coordinates": [
+      [-42.4, -70.5],
+      [-45.0, -65.0],
+      [-41.0, -65.0],
+      [-42.0, -70.0],
+      [-42.4, -70.5]
+    ],
+    "description": "Coastal highway around the Hellas Sea",
+    "book": "Blue Mars",
+    "color": "#8B4513",
+    "style": "solid"
+  },
+  {
+    "name": "Polar Express",
+    "type": "railway",
+    "coordinates": [
+      [-75.0, 0.0],
+      [-77.0, 15.0],
+      [-78.0, 30.0],
+      [-76.0, 60.0],
+      [-74.0, 120.0]
+    ],
+    "description": "Railway connecting southern polar settlements",
+    "book": "Green Mars",
+    "color": "#333333",
+    "style": "solid"
+  },
+  {
+    "name": "Elevator Debris Field",
+    "type": "debris",
+    "coordinates": [
+      [0.0, -132.58],
+      [5.0, -130.0],
+      [10.0, -125.0],
+      [15.0, -120.0],
+      [20.0, -115.0]
+    ],
+    "description": "Scattered remains of the space elevator after its fall",
+    "book": "Green Mars",
+    "color": "#ff4444",
+    "style": "dotted"
+  },
+  {
+    "name": "Underground Tunnel Network",
+    "type": "tunnel",
+    "coordinates": [
+      [-75.0, 0.0],
+      [-77.0, 15.0],
+      [-79.0, -30.0],
+      [-80.0, -45.0]
+    ],
+    "description": "Secret underground connections between polar settlements",
+    "book": "Green Mars",
+    "color": "#666666",
+    "style": "dashed"
+  },
+  {
+    "name": "Areosynchronous Orbital Path",
+    "type": "orbit",
+    "coordinates": [
+      [0.0, -132.58]
+    ],
+    "description": "Orbital path of the space elevator counterweight",
+    "book": "Red Mars",
+    "color": "#00ff00",
+    "style": "dashed"
+  }
+]

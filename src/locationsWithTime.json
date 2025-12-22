@@ -1,0 +1,162 @@
+[
+  {
+    "Location": "Underhill",
+    "Latitude": -1.1,
+    "Longitude": -76.2,
+    "Description": "First Martian city, located near Hebes Chasma",
+    "Book": "Red Mars",
+    "Year": 2027
+  },
+  {
+    "Location": "Zygote",
+    "Latitude": -83.0,
+    "Longitude": 45.0,
+    "Description": "Hidden refuge in the South polar region, home of the Areophany",
+    "Book": "Red Mars",
+    "Year": 2040
+  },
+  {
+    "Location": "Acheron Fossae",
+    "Latitude": 37.67,
+    "Longitude": -135.87,
+    "Description": "Biomedical and biotechnology research center, where longevity treatment was created",
+    "Book": "Red Mars",
+    "Year": 2035
+  },
+  {
+    "Location": "Sheffield",
+    "Latitude": 0.0,
+    "Longitude": -132.58,
+    "Description": "Home of the Martian end of the space elevator, on Pavonis Mons",
+    "Book": "Red Mars",
+    "Year": 2055
+  },
+  {
+    "Location": "Burroughs",
+    "Latitude": 22.5,
+    "Longitude": 49.97,
+    "Description": "Second Martian capital city, located in Isidis Planitia",
+    "Book": "Red Mars",
+    "Year": 2050
+  },
+  {
+    "Location": "Sabishii",
+    "Latitude": -14.0,
+    "Longitude": -85.0,
+    "Description": "Home of Sabishii University, located in Tyrrhena Patera",
+    "Book": "Red Mars",
+    "Year": 2045
+  },
+  {
+    "Location": "Echus Overlook",
+    "Latitude": 1.0,
+    "Longitude": -79.0,
+    "Description": "City built on a cliff, terraforming headquarters and later fliers' paradise",
+    "Book": "Red Mars",
+    "Year": 2048
+  },
+  {
+    "Location": "Carr",
+    "Latitude": -22.48,
+    "Longitude": -23.1,
+    "Description": "Big domed city at Carr Crater, destroyed during First Martian Revolution",
+    "Book": "Red Mars",
+    "Year": 2052
+  },
+  {
+    "Location": "Nicosia",
+    "Latitude": 5.0,
+    "Longitude": -130.0,
+    "Description": "Tented city where John Boone was murdered during inauguration festival",
+    "Book": "Red Mars",
+    "Year": 2058
+  },
+  {
+    "Location": "Cairo",
+    "Latitude": -10.0,
+    "Longitude": -132.0,
+    "Description": "Big city south of Pavonis Mons, 10 km above datum",
+    "Book": "Red Mars",
+    "Year": 2056
+  },
+  {
+    "Location": "Phobos Station",
+    "Latitude": 0.0,
+    "Longitude": 0.0,
+    "Description": "Space station on Mars' moon Phobos, transportation hub",
+    "Book": "Red Mars",
+    "Year": 2028
+  },
+  {
+    "Location": "Dorsa Brevia",
+    "Latitude": -75.0,
+    "Longitude": 0.0,
+    "Description": "Hidden settlement near South pole, home of the Dorsa Brevia Conference",
+    "Book": "Green Mars",
+    "Year": 2085
+  },
+  {
+    "Location": "Vishniac",
+    "Latitude": -77.0,
+    "Longitude": 15.0,
+    "Description": "Mohole near South pole, industrial center of the underground",
+    "Book": "Green Mars",
+    "Year": 2082
+  },
+  {
+    "Location": "Odessa",
+    "Latitude": -42.4,
+    "Longitude": -70.5,
+    "Description": "Port city on the shores of the Hellas Sea",
+    "Book": "Green Mars",
+    "Year": 2110
+  },
+  {
+    "Location": "Nirgal Vallis",
+    "Latitude": -28.4,
+    "Longitude": -42.0,
+    "Description": "Huge tenting over an entire canyon, a long river channel",
+    "Book": "Green Mars",
+    "Year": 2120
+  },
+  {
+    "Location": "Dao Vallis",
+    "Latitude": -38.7,
+    "Longitude": -87.9,
+    "Description": "Huge tenting over an entire canyon, runs southwestward into Hellas Planitia",
+    "Book": "Green Mars",
+    "Year": 2125
+  },
+  {
+    "Location": "Pavonis Mons",
+    "Latitude": 0.0,
+    "Longitude": -112.8,
+    "Description": "Massive shield volcano, site of constitutional congress and space elevator",
+    "Book": "Blue Mars",
+    "Year": 2128
+  },
+  {
+    "Location": "Olympus Mons",
+    "Latitude": 18.65,
+    "Longitude": -133.8,
+    "Description": "Largest volcano in the solar system, major landmark and settlement area",
+    "Book": "Blue Mars",
+    "Year": 2140
+  },
+  {
+    "Location": "Vastitas Borealis",
+    "Latitude": 70.0,
+    "Longitude": 0.0,
+    "Description": "Northern ocean settlement, major port city",
+    "Book": "Blue Mars",
+    "Year": 2180
+  },
+  {
+    "Location": "Valles Marineris",
+    "Latitude": -14.0,
+    "Longitude": -59.0,
+    "Description": "Grand canyon of Mars, multiple settlements along its length",
+    "Book": "Blue Mars",
+    "Year": 2175
+  }
+]

@@ -36,6 +36,87 @@
   text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
 }
 
+.year-display {
+  font-size: 14px;
+  font-weight: bold;
+  color: #FFD700;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+  margin-top: 2px;
+}
+
+/* Time slider overlay */
+.time-slider-overlay {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 15px 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  z-index: 1000;
+  min-width: 400px;
+}
+
+.time-slider-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.time-slider-container label {
+  font-size: 14px;
+  font-weight: bold;
+  color: #FFD700;
+}
+
+.time-slider {
+  width: 350px;
+  height: 6px;
+  background: #333;
+  border-radius: 3px;
+  outline: none;
+  -webkit-appearance: none;
+}
+
+.time-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  background: #FFD700;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+.time-slider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background: #FFD700;
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+.time-markers {
+  display: flex;
+  justify-content: space-between;
+  width: 350px;
+  font-size: 10px;
+  color: #ccc;
+}
+
+.terraforming-status {
+  text-align: center;
+  font-size: 11px;
+  color: #4A90E2;
+  margin-top: 8px;
+  font-style: italic;
+}
+
 /* Compact controls overlay */
 .controls-overlay {
   position: absolute;
@@ -82,6 +163,22 @@
   font-size: 11px;
   color: #666;
   font-weight: bold;
+  white-space: nowrap;
+}
+
+.infrastructure-toggle {
+  display: flex;
+  align-items: center;
+  font-size: 11px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.infrastructure-toggle input {
+  margin-right: 4px;
+}
+
+.infrastructure-toggle span {
   white-space: nowrap;
 }
 
@@ -133,6 +230,38 @@
 .custom-marker {
   border: none !important;
   background: none !important;
+}
+
+.infrastructure-popup h4 {
+  margin: 0 0 8px 0;
+  color: #8B4513;
+  font-size: 14px;
+}
+
+.infrastructure-popup p {
+  margin: 4px 0;
+  line-height: 1.3;
+  font-size: 12px;
+}
+
+.infrastructure-popup strong {
+  color: #333;
+}
+
+.water-popup h4 {
+  margin: 0 0 8px 0;
+  color: #4A90E2;
+  font-size: 14px;
+}
+
+.water-popup p {
+  margin: 4px 0;
+  line-height: 1.3;
+  font-size: 12px;
+}
+
+.water-popup strong {
+  color: #333;
 }
 
 /* 3D Globe specific styles */

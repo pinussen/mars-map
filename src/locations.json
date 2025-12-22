@@ -4,7 +4,8 @@
     "Latitude": -1.1,
     "Longitude": -76.2,
     "Description": "First Martian city, located near Hebes Chasma",
-    "Book": "Red Mars"
+    "Book": "Red Mars",
+    "Year": 2027
   },
   {
     "Location": "Burroughs",
@@ -438,6 +439,139 @@
     "Latitude": 40.0,
     "Longitude": -110.0,
     "Description": "Largest volcano by area, low shield volcano",
+    "Book": "Blue Mars"
+  },
+  {
+    "Location": "Phobos Station",
+    "Latitude": 0.0,
+    "Longitude": 0.0,
+    "Description": "Space station on Mars' moon Phobos, transportation hub",
+    "Book": "Red Mars"
+  },
+  {
+    "Location": "Deimos Station",
+    "Latitude": 0.0,
+    "Longitude": 0.0,
+    "Description": "Mining station on Mars' smaller moon Deimos",
+    "Book": "Green Mars"
+  },
+  {
+    "Location": "New Singapore",
+    "Latitude": 35.0,
+    "Longitude": 158.0,
+    "Description": "Major trading port in Elysium region",
+    "Book": "Blue Mars"
+  },
+  {
+    "Location": "Lowell",
+    "Latitude": -52.0,
+    "Longitude": -81.0,
+    "Description": "Research station named after astronomer Percival Lowell",
+    "Book": "Blue Mars"
+  },
+  {
+    "Location": "Schiaparelli",
+    "Latitude": -3.0,
+    "Longitude": 16.0,
+    "Description": "Major crater settlement, named after Italian astronomer",
+    "Book": "Blue Mars"
+  },
+  {
+    "Location": "Huygens",
+    "Latitude": -14.0,
+    "Longitude": 55.0,
+    "Description": "Crater settlement in Terra Sabaea region",
+    "Book": "Blue Mars"
+  },
+  {
+    "Location": "Cassini",
+    "Latitude": 24.0,
+    "Longitude": 328.0,
+    "Description": "Northern crater settlement and research center",
+    "Book": "Blue Mars"
+  },
+  {
+    "Location": "Galle Crater",
+    "Latitude": -51.0,
+    "Longitude": -31.0,
+    "Description": "The 'Happy Face' crater, popular tourist destination",
+    "Book": "Blue Mars"
+  },
+  {
+    "Location": "Holden Crater",
+    "Latitude": -26.0,
+    "Longitude": -34.0,
+    "Description": "Ancient lake bed, major archaeological site",
+    "Book": "Blue Mars"
+  },
+  {
+    "Location": "Gusev Crater",
+    "Latitude": -14.5,
+    "Longitude": 175.5,
+    "Description": "Spirit rover landing site, memorial and settlement",
+    "Book": "Blue Mars"
+  },
+  {
+    "Location": "Meridiani Planum",
+    "Latitude": -2.0,
+    "Longitude": 354.0,
+    "Description": "Opportunity rover region, hematite deposits",
+    "Book": "Blue Mars"
+  },
+  {
+    "Location": "Jezero Crater",
+    "Latitude": 18.4,
+    "Longitude": 77.5,
+    "Description": "Perseverance rover site, ancient river delta",
+    "Book": "Blue Mars"
+  },
+  {
+    "Location": "Tempe Terra",
+    "Latitude": 40.0,
+    "Longitude": -70.0,
+    "Description": "Highland region, major agricultural terraces",
+    "Book": "Blue Mars"
+  },
+  {
+    "Location": "Xanthe Terra",
+    "Latitude": 15.0,
+    "Longitude": -45.0,
+    "Description": "Ancient highland region, wine country",
+    "Book": "Blue Mars"
+  },
+  {
+    "Location": "Arabia Terra",
+    "Latitude": 20.0,
+    "Longitude": 10.0,
+    "Description": "Large highland region, major population center",
+    "Book": "Blue Mars"
+  },
+  {
+    "Location": "Noachis Terra",
+    "Latitude": -45.0,
+    "Longitude": 350.0,
+    "Description": "Ancient southern highlands, historical preservation area",
+    "Book": "Blue Mars"
+  },
+  {
+    "Location": "Promethei Terra",
+    "Latitude": -60.0,
+    "Longitude": -90.0,
+    "Description": "Southern highland region near Hellas",
+    "Book": "Blue Mars"
+  },
+  {
+    "Location": "Cimmeria Terra",
+    "Latitude": -30.0,
+    "Longitude": 145.0,
+    "Description": "Dark highland region, major settlement area",
+    "Book": "Blue Mars"
+  },
+  {
+    "Location": "Solis Planum",
+    "Latitude": -25.0,
+    "Longitude": -90.0,
+    "Description": "Plateau region south of Valles Marineris",
     "Book": "Blue Mars"
   }
 ]

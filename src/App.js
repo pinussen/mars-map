@@ -1,72 +1,109 @@
 import React, { useState } from 'react';
 import './App.css';
 import Map from './Map';
-import locations from './locations.json';
+import locationsWithTime from './locationsWithTime.json';
+import waterLevels from './waterLevels.json';
 
 function App() {
-  const [filteredLocations, setFilteredLocations] = useState(locations);
-  const [mapError, setMapError] = useState(false);
   const [selectedBook, setSelectedBook] = useState('all');
+  const [showInfrastructure, setShowInfrastructure] = useState(true);
+  const [currentYear, setCurrentYear] = useState(2200);
+  const [mapError, setMapError] = useState(false);
 
-  const handleSearch = (event) => {
-    const query = event.target.value.toLowerCase();
-    filterLocations(query, selectedBook);
+  // Filter locations by year and book
+  const getFilteredLocations = () => {
+    let filtered = locationsWithTime.filter(location => location.Year <= currentYear);
+    
+    if (selectedBook !== 'all') {
+      filtered = filtered.filter(location => location.Book === selectedBook);
+    }
+    
+    return filtered;
+  };
+
+  const filteredLocations = getFilteredLocations();
+
+  // Get current water level data
+  const getCurrentWaterLevel = () => {
+    const sortedWaterLevels = waterLevels.sort((a, b) => a.year - b.year);
+    let currentWaterLevel = sortedWaterLevels[0];
+    
+    for (const waterLevel of sortedWaterLevels) {
+      if (waterLevel.year <= currentYear) {
+        currentWaterLevel = waterLevel;
+      } else {
+        break;
+      }
+    }
+    
+    return currentWaterLevel;
   };
 
   const handleBookFilter = (event) => {
-    const book = event.target.value;
-    setSelectedBook(book);
-    const searchInput = document.querySelector('.search-bar');
-    const searchQuery = searchInput ? searchInput.value.toLowerCase() : '';
-    filterLocations(searchQuery, book);
+    setSelectedBook(event.target.value);
   };
 
-  const filterLocations = (query, book) => {
-    let filtered = locations;
-    
-    if (book !== 'all') {
-      filtered = filtered.filter(location => location.Book === book);
-    }
-    
-    if (query) {
-      filtered = filtered.filter(location =>
-        location.Location.toLowerCase().includes(query) ||
-        location.Description.toLowerCase().includes(query)
-      );
-    }
-    
-    setFilteredLocations(filtered);
+  const handleYearChange = (event) => {
+    setCurrentYear(parseInt(event.target.value));
   };
 
   const books = ['Red Mars', 'Green Mars', 'Blue Mars'];
   const bookCounts = books.reduce((acc, book) => {
-    acc[book] = locations.filter(loc => loc.Book === book).length;
+    acc[book] = locationsWithTime.filter(loc => loc.Book === book && loc.Year <= currentYear).length;
     return acc;
   }, {});
+
+  const totalLocations = locationsWithTime.filter(loc => loc.Year <= currentYear).length;
+  const currentWaterLevel = getCurrentWaterLevel();
 
   return (
     <div style={{ width: '100vw', height: '100vh', position: 'relative' }}>
       {/* Map takes full screen */}
       <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0 }}>
-        <Map locations={filteredLocations} onError={() => setMapError(true)} />
+        <Map 
+          locations={filteredLocations} 
+          onError={() => setMapError(true)}
+          showInfrastructure={showInfrastructure}
+          currentYear={currentYear}
+          waterLevel={currentWaterLevel}
+        />
       </div>
       
       {/* Compact header overlay */}
       <div className="header-overlay">
         <h1>Mars Trilogy Map</h1>
+        <div className="year-display">{currentYear}</div>
+      </div>
+      
+      {/* Time slider overlay */}
+      <div className="time-slider-overlay">
+        <div className="time-slider-container">
+          <label>Year: {currentYear}</label>
+          <input
+            type="range"
+            min="2027"
+            max="2200"
+            step="1"
+            value={currentYear}
+            onChange={handleYearChange}
+            className="time-slider"
+          />
+          <div className="time-markers">
+            <span>2027</span>
+            <span>2061</span>
+            <span>2127</span>
+            <span>2200</span>
+          </div>
+        </div>
+        <div className="terraforming-status">
+          {currentWaterLevel.description}
+        </div>
       </div>
       
       {/* Compact controls overlay */}
       <div className="controls-overlay">
-        <input
-          type="text"
-          className="search-bar-compact"
-          placeholder="Search locations..."
-          onChange={handleSearch}
-        />
-        
         <select className="book-filter-compact" value={selectedBook} onChange={handleBookFilter}>
-          <option value="all">All ({locations.length})</option>
+          <option value="all">All ({totalLocations})</option>
           {books.map(book => (
             <option key={book} value={book}>
               {book} ({bookCounts[book]})
@@ -74,8 +111,17 @@ function App() {
           ))}
         </select>
         
+        <label className="infrastructure-toggle">
+          <input
+            type="checkbox"
+            checked={showInfrastructure}
+            onChange={(e) => setShowInfrastructure(e.target.checked)}
+          />
+          <span>Infrastructure</span>
+        </label>
+        
         <div className="location-count-compact">
-          {filteredLocations.length} / {locations.length}
+          {filteredLocations.length} / {totalLocations}
         </div>
       </div>
       
@@ -94,6 +140,10 @@ function App() {
         <div className="legend-item-compact">
           <div className="legend-color" style={{backgroundColor: '#4444ff'}}></div>
           Blue Mars
+        </div>
+        <div className="legend-item-compact">
+          <div className="legend-color" style={{backgroundColor: '#4A90E2'}}></div>
+          Water
         </div>
       </div>
     </div>

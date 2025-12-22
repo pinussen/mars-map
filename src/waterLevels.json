@@ -1,0 +1,177 @@
+[
+  {
+    "year": 2027,
+    "description": "Pre-terraforming Mars - No surface water",
+    "waterBodies": []
+  },
+  {
+    "year": 2050,
+    "description": "Early terraforming - Polar ice melting begins",
+    "waterBodies": [
+      {
+        "name": "North Polar Lake",
+        "coordinates": [
+          [85, -180], [85, -90], [85, 0], [85, 90], [85, 180]
+        ],
+        "color": "#4A90E2",
+        "opacity": 0.3
+      }
+    ]
+  },
+  {
+    "year": 2080,
+    "description": "Atmosphere thickening - Small seas forming",
+    "waterBodies": [
+      {
+        "name": "North Polar Sea",
+        "coordinates": [
+          [80, -180], [80, -90], [80, 0], [80, 90], [80, 180],
+          [75, 180], [75, 90], [75, 0], [75, -90], [75, -180]
+        ],
+        "color": "#4A90E2",
+        "opacity": 0.4
+      },
+      {
+        "name": "Hellas Sea (Early)",
+        "coordinates": [
+          [-35, -75], [-35, -65], [-45, -65], [-50, -70], [-45, -75]
+        ],
+        "color": "#4A90E2",
+        "opacity": 0.4
+      }
+    ]
+  },
+  {
+    "year": 2120,
+    "description": "Major terraforming - Hellas Sea established",
+    "waterBodies": [
+      {
+        "name": "Northern Ocean",
+        "coordinates": [
+          [70, -180], [70, -90], [70, 0], [70, 90], [70, 180],
+          [60, 180], [60, 90], [60, 0], [60, -90], [60, -180]
+        ],
+        "color": "#4A90E2",
+        "opacity": 0.5
+      },
+      {
+        "name": "Hellas Sea",
+        "coordinates": [
+          [-30, -80], [-30, -60], [-40, -55], [-50, -60], [-50, -80], [-45, -85]
+        ],
+        "color": "#4A90E2",
+        "opacity": 0.5
+      },
+      {
+        "name": "Argyre Sea",
+        "coordinates": [
+          [-45, -50], [-45, -35], [-55, -35], [-55, -50]
+        ],
+        "color": "#4A90E2",
+        "opacity": 0.5
+      }
+    ]
+  },
+  {
+    "year": 2160,
+    "description": "Advanced terraforming - Multiple seas and lakes",
+    "waterBodies": [
+      {
+        "name": "Northern Ocean",
+        "coordinates": [
+          [65, -180], [65, -90], [65, 0], [65, 90], [65, 180],
+          [45, 180], [45, 90], [45, 0], [45, -90], [45, -180]
+        ],
+        "color": "#4A90E2",
+        "opacity": 0.6
+      },
+      {
+        "name": "Hellas Sea",
+        "coordinates": [
+          [-25, -85], [-25, -55], [-35, -50], [-50, -55], [-55, -75], [-50, -90], [-40, -90]
+        ],
+        "color": "#4A90E2",
+        "opacity": 0.6
+      },
+      {
+        "name": "Argyre Sea",
+        "coordinates": [
+          [-40, -55], [-40, -30], [-60, -30], [-60, -55]
+        ],
+        "color": "#4A90E2",
+        "opacity": 0.6
+      },
+      {
+        "name": "Chryse Sea",
+        "coordinates": [
+          [15, -60], [15, -40], [25, -40], [30, -50], [25, -60]
+        ],
+        "color": "#4A90E2",
+        "opacity": 0.6
+      },
+      {
+        "name": "Valles Marineris Lakes",
+        "coordinates": [
+          [-10, -100], [-10, -50], [-18, -50], [-18, -100]
+        ],
+        "color": "#4A90E2",
+        "opacity": 0.6
+      }
+    ]
+  },
+  {
+    "year": 2200,
+    "description": "Full terraforming - Extensive ocean and sea system",
+    "waterBodies": [
+      {
+        "name": "Northern Ocean",
+        "coordinates": [
+          [60, -180], [60, -90], [60, 0], [60, 90], [60, 180],
+          [35, 180], [35, 90], [35, 0], [35, -90], [35, -180]
+        ],
+        "color": "#4A90E2",
+        "opacity": 0.7
+      },
+      {
+        "name": "Hellas Sea",
+        "coordinates": [
+          [-20, -90], [-20, -50], [-30, -45], [-50, -50], [-60, -70], [-55, -95], [-45, -95]
+        ],
+        "color": "#4A90E2",
+        "opacity": 0.7
+      },
+      {
+        "name": "Argyre Sea",
+        "coordinates": [
+          [-35, -60], [-35, -25], [-65, -25], [-65, -60]
+        ],
+        "color": "#4A90E2",
+        "opacity": 0.7
+      },
+      {
+        "name": "Chryse Sea",
+        "coordinates": [
+          [10, -70], [10, -30], [35, -30], [35, -60], [30, -70]
+        ],
+        "color": "#4A90E2",
+        "opacity": 0.7
+      },
+      {
+        "name": "Valles Marineris Sea",
+        "coordinates": [
+          [-5, -105], [-5, -45], [-23, -45], [-23, -105]
+        ],
+        "color": "#4A90E2",
+        "opacity": 0.7
+      },
+      {
+        "name": "Amazonis Sea",
+        "coordinates": [
+          [5, -170], [5, -140], [25, -140], [25, -170]
+        ],
+        "color": "#4A90E2",
+        "opacity": 0.7
+      }
+    ]
+  }
+]

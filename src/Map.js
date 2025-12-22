@@ -1,10 +1,15 @@
 import React from 'react';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import L from 'leaflet';
+import proj4 from 'proj4';
 import 'leaflet/dist/leaflet.css';
+import 'proj4leaflet';
 import iconRetinaUrl from 'leaflet/dist/images/marker-icon-2x.png';
 import iconUrl from 'leaflet/dist/images/marker-icon.png';
 import shadowUrl from 'leaflet/dist/images/marker-shadow.png';
+
+// Make L globally available for proj4leaflet
+window.L = L;
 
 // Fix for default icon issue with webpack
 delete L.Icon.Default.prototype._getIconUrl;
@@ -12,6 +17,19 @@ L.Icon.Default.mergeOptions({
   iconRetinaUrl,
   iconUrl,
   shadowUrl,
+});
+
+// Define Mars coordinate system
+proj4.defs("EPSG:4326", "+proj=longlat +datum=WGS84 +no_defs");
+proj4.defs("EPSG:49900", "+proj=longlat +a=3396190 +b=3376200 +no_defs");
+
+// Create Mars CRS
+const marsCrs = new L.Proj.CRS('EPSG:49900', '+proj=longlat +a=3396190 +b=3376200 +no_defs', {
+  resolutions: [
+    8192, 4096, 2048, 1024, 512, 256, 128, 64, 32, 16, 8, 4, 2, 1, 0.5
+  ],
+  origin: [-180, 90],
+  bounds: L.bounds([-180, -90], [180, 90])
 });
 
 // Create custom icons for different books
@@ -40,17 +58,17 @@ const createBookIcon = (book) => {
 };
 
 const Map = ({ locations, onError }) => {
-  // Use standard Earth coordinates for now to test basic functionality
   return (
     <MapContainer 
       center={[0, 0]} 
       zoom={2} 
       scrollWheelZoom={true}
+      crs={marsCrs}
       style={{ height: '100%', width: '100%' }}
     >
       <TileLayer
-        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        url="https://tiles.openplanetary.org/mars/{z}/{x}/{y}.png"
+        attribution='&copy; <a href="https://www.openplanetary.org/">OpenPlanetaryMap</a>'
         onError={onError}
       />
       {locations && locations.map(location => (

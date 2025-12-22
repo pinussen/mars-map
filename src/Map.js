@@ -1,14 +1,15 @@
 import React from 'react';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
-import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
-window.L = L; // Make L globally available for proj4leaflet
-import 'proj4leaflet'; // Ensure proj4leaflet extends L
 import proj4 from 'proj4';
-
+import 'leaflet/dist/leaflet.css';
+import 'proj4leaflet'; // Ensure proj4leaflet extends L
 import iconRetinaUrl from 'leaflet/dist/images/marker-icon-2x.png';
 import iconUrl from 'leaflet/dist/images/marker-icon.png';
 import shadowUrl from 'leaflet/dist/images/marker-shadow.png';
+
+// Make L globally available for proj4leaflet
+window.L = L;
 
 // Fix for default icon issue with webpack
 delete L.Icon.Default.prototype._getIconUrl;

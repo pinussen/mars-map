@@ -229,54 +229,6 @@ const SimpleMarsGlobe = ({ locations, onLocationClick }) => {
     }
   }, [locations, updateMarkers]);
 
-  const latLngToVector3 = (lat, lng, radius = 1.02) => {
-    const THREE = window.THREE;
-    if (!THREE) return null;
-    
-    const phi = (90 - lat) * (Math.PI / 180);
-    const theta = (lng + 180) * (Math.PI / 180);
-    
-    return new THREE.Vector3(
-      -radius * Math.sin(phi) * Math.cos(theta),
-      radius * Math.cos(phi),
-      radius * Math.sin(phi) * Math.sin(theta)
-    );
-  };
-
-  const updateMarkers = () => {
-    const THREE = window.THREE;
-    if (!THREE || !sceneRef.current || !locations) return;
-
-    // Remove existing markers
-    markersRef.current.forEach(marker => {
-      sceneRef.current.remove(marker);
-    });
-    markersRef.current = [];
-
-    // Add new markers
-    locations.forEach((location) => {
-      const position = latLngToVector3(location.Latitude, location.Longitude);
-      if (!position) return;
-
-      const colors = {
-        'Red Mars': 0xff4444,
-        'Green Mars': 0x44ff44,
-        'Blue Mars': 0x4444ff
-      };
-      const color = colors[location.Book] || 0xffffff;
-
-      const geometry = new THREE.SphereGeometry(0.02, 8, 8);
-      const material = new THREE.MeshBasicMaterial({ color });
-      const marker = new THREE.Mesh(geometry, material);
-      
-      marker.position.copy(position);
-      marker.userData = location;
-      
-      sceneRef.current.add(marker);
-      markersRef.current.push(marker);
-    });
-  };
-
   return (
     <div style={{ width: '100%', height: '100%', position: 'relative' }}>
       <div 

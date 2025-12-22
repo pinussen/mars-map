@@ -127,3 +127,64 @@
   border: 2px solid white;
   box-shadow: 0 1px 2px rgba(0,0,0,0.3);
 }
+
+/* 3D Globe specific styles */
+.globe-container {
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(ellipse at center, #1a1a2e 0%, #000000 100%);
+}
+
+.globe-controls {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 15px;
+  border-radius: 8px;
+  font-size: 12px;
+  z-index: 1000;
+}
+
+.globe-controls h4 {
+  margin: 0 0 10px 0;
+  color: #ff6b35;
+}
+
+.view-toggle-button {
+  background: linear-gradient(135deg, #ff6b35, #f7931e);
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+}
+
+.view-toggle-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 107, 53, 0.4);
+}
+
+.view-toggle-button:active {
+  transform: translateY(0);
+}
+
+/* Update header for space theme when in 3D mode */
+.header.space-theme {
+  background: linear-gradient(135deg, #1a1a2e, #16213e);
+  color: #ff6b35;
+}
+
+.header.space-theme h1 {
+  color: white;
+  text-shadow: 0 0 10px rgba(255, 107, 53, 0.5);
+}
+
+.header.space-theme p {
+  color: #cccccc;
+}

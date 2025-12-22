@@ -6,38 +6,56 @@ const SimpleMarsGlobe = ({ locations, onLocationClick }) => {
   const rendererRef = useRef(null);
   const globeRef = useRef(null);
   const markersRef = useRef([]);
-  const [selectedLocation, setSelectedLocation] = useState(null);
-  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
 
-  useEffect(() => {
-    // Only proceed if Three.js is available
-    if (typeof window !== 'undefined' && window.THREE) {
-      initThreeJS();
-    } else {
-      // Load Three.js dynamically
-      const script = document.createElement('script');
-      script.src = 'https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js';
-      script.onload = () => {
-        initThreeJS();
+  const latLngToVector3 = (lat, lng, radius = 1.02) => {
+    const THREE = window.THREE;
+    if (!THREE) return null;
+    
+    const phi = (90 - lat) * (Math.PI / 180);
+    const theta = (lng + 180) * (Math.PI / 180);
+    
+    return new THREE.Vector3(
+      -radius * Math.sin(phi) * Math.cos(theta),
+      radius * Math.cos(phi),
+      radius * Math.sin(phi) * Math.sin(theta)
+    );
+  };
+
+  const updateMarkers = React.useCallback(() => {
+    const THREE = window.THREE;
+    if (!THREE || !sceneRef.current || !locations) return;
+
+    // Remove existing markers
+    markersRef.current.forEach(marker => {
+      sceneRef.current.remove(marker);
+    });
+    markersRef.current = [];
+
+    // Add new markers
+    locations.forEach((location) => {
+      const position = latLngToVector3(location.Latitude, location.Longitude);
+      if (!position) return;
+
+      const colors = {
+        'Red Mars': 0xff4444,
+        'Green Mars': 0x44ff44,
+        'Blue Mars': 0x4444ff
       };
-      document.head.appendChild(script);
-    }
+      const color = colors[location.Book] || 0xffffff;
 
-    return () => {
-      if (rendererRef.current && mountRef.current) {
-        mountRef.current.removeChild(rendererRef.current.domElement);
-        rendererRef.current.dispose();
-      }
-    };
-  }, []);
-
-  useEffect(() => {
-    if (sceneRef.current && globeRef.current) {
-      updateMarkers();
-    }
+      const geometry = new THREE.SphereGeometry(0.02, 8, 8);
+      const material = new THREE.MeshBasicMaterial({ color });
+      const marker = new THREE.Mesh(geometry, material);
+      
+      marker.position.copy(position);
+      marker.userData = location;
+      
+      sceneRef.current.add(marker);
+      markersRef.current.push(marker);
+    });
   }, [locations]);
 
-  const initThreeJS = () => {
+  const initThreeJS = React.useCallback(() => {
     const THREE = window.THREE;
     if (!THREE || !mountRef.current) return;
 
@@ -129,8 +147,6 @@ const SimpleMarsGlobe = ({ locations, onLocationClick }) => {
     };
 
     const onMouseMove = (event) => {
-      setMousePos({ x: event.clientX, y: event.clientY });
-      
       if (isDragging) {
         const deltaMove = {
           x: event.clientX - previousMousePosition.x,
@@ -182,7 +198,36 @@ const SimpleMarsGlobe = ({ locations, onLocationClick }) => {
     window.addEventListener('resize', handleResize);
 
     updateMarkers();
-  };
+  }, [updateMarkers]);
+
+  useEffect(() => {
+    // Only proceed if Three.js is available
+    if (typeof window !== 'undefined' && window.THREE) {
+      initThreeJS();
+    } else {
+      // Load Three.js dynamically
+      const script = document.createElement('script');
+      script.src = 'https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js';
+      script.onload = () => {
+        initThreeJS();
+      };
+      document.head.appendChild(script);
+    }
+
+    return () => {
+      const currentMount = mountRef.current;
+      if (rendererRef.current && currentMount) {
+        currentMount.removeChild(rendererRef.current.domElement);
+        rendererRef.current.dispose();
+      }
+    };
+  }, [initThreeJS]);
+
+  useEffect(() => {
+    if (sceneRef.current && globeRef.current) {
+      updateMarkers();
+    }
+  }, [locations, updateMarkers]);
 
   const latLngToVector3 = (lat, lng, radius = 1.02) => {
     const THREE = window.THREE;

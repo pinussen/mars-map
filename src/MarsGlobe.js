@@ -89,14 +89,12 @@ function Mars({ locations, onLocationClick }) {
               <meshBasicMaterial color={color} />
             </mesh>
             
-            {/* Location label */}
             <Text
               position={[position.x * 1.1, position.y * 1.1, position.z * 1.1]}
               fontSize={0.03}
               color={color}
               anchorX="center"
               anchorY="middle"
-              font="/fonts/helvetiker_regular.typeface.json"
             >
               {location.Location}
             </Text>

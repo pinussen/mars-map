@@ -29,18 +29,52 @@ const marsCrs = new L.CRS.Proj4('urn:ogc:def:crs:IAU:EOS:MARS', 'EPSG:4326', {
   origin: [0, 0]
 });
 
+// Create custom icons for different books
+const createBookIcon = (book) => {
+  const colors = {
+    'Red Mars': '#ff4444',
+    'Green Mars': '#44ff44', 
+    'Blue Mars': '#4444ff'
+  };
+  
+  const color = colors[book] || '#888888';
+  
+  return L.divIcon({
+    className: 'custom-marker',
+    html: `<div style="
+      background-color: ${color};
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      border: 2px solid white;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    "></div>`,
+    iconSize: [20, 20],
+    iconAnchor: [10, 10]
+  });
+};
+
 const Map = ({ locations, onError }) => {
   return (
     <MapContainer center={[0, 0]} zoom={2} scrollWheelZoom={true} crs={marsCrs}>
       <TileLayer
         url="https://tiles.openplanetary.org/mars/{z}/{x}/{y}.png"
         attribution='&copy; <a href="https://www.openplanetary.org/">OpenPlanetaryMap</a>'
+        onError={onError}
       />
       {locations.map(location => (
-        <Marker key={location.Location} position={[location.Latitude, location.Longitude]}>
+        <Marker 
+          key={location.Location} 
+          position={[location.Latitude, location.Longitude]}
+          icon={createBookIcon(location.Book)}
+        >
           <Popup>
-            <b>{location.Location}</b><br />
-            {location.Description}
+            <div className="location-popup">
+              <h3>{location.Location}</h3>
+              <p><strong>Book:</strong> {location.Book}</p>
+              <p><strong>Coordinates:</strong> {location.Latitude.toFixed(2)}°, {location.Longitude.toFixed(2)}°</p>
+              <p>{location.Description}</p>
+            </div>
           </Popup>
         </Marker>
       ))}

@@ -1,70 +1,99 @@
-# Getting Started with Create React App
+# Mars Trilogy Interactive Map
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+An interactive map of Mars featuring locations from Kim Stanley Robinson's acclaimed Mars trilogy: Red Mars, Green Mars, and Blue Mars.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **Interactive Mars Map**: Explore the surface of Mars using real Mars satellite imagery
+- **Book Filtering**: Filter locations by which book they appear in
+- **Search Functionality**: Search for specific locations by name or description
+- **Color-coded Markers**: Different colors for each book (Red, Green, Blue)
+- **Detailed Information**: Click on any location to see coordinates, book source, and description
+- **Accurate Coordinates**: Uses real Mars coordinates for authentic geographical locations
 
-### `npm start`
+## Locations Included
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Red Mars (10 locations)
+- Underhill - First Martian city
+- Burroughs - Second Martian capital
+- Acheron Fossae - Biomedical research center
+- Sheffield - Space elevator terminus
+- Sabishii - University town
+- And more...
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Green Mars (10 locations)
+- Dorsa Brevia - Underground conference center
+- Vishniac - Industrial mohole
+- Odessa - Hellas Sea port city
+- Da Vinci Crater - Research center
+- And more...
 
-### `npm test`
+### Blue Mars
+- Additional locations to be added
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Technology
 
-### `npm run build`
+- **React** - Frontend framework
+- **Leaflet** - Interactive mapping library
+- **Proj4Leaflet** - Mars coordinate system support
+- **OpenPlanetaryMap** - Mars satellite imagery tiles
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Getting Started
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Prerequisites
+- Node.js (version 14 or higher)
+- npm or yarn
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Installation
 
-### `npm run eject`
+1. Clone the repository:
+```bash
+git clone [repository-url]
+cd red-mars-map
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+2. Install dependencies:
+```bash
+npm install
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+3. Start the development server:
+```bash
+npm start
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+4. Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Usage
 
-## Learn More
+- **Zoom and Pan**: Use mouse wheel to zoom, click and drag to pan around Mars
+- **Filter by Book**: Use the dropdown to show only locations from specific books
+- **Search**: Type in the search bar to find locations by name or description
+- **Location Details**: Click on any marker to see detailed information about that location
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## About the Mars Trilogy
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Kim Stanley Robinson's Mars trilogy is a landmark work of science fiction that chronicles the colonization and terraforming of Mars over several centuries. The books are renowned for their scientific accuracy and detailed world-building.
 
-### Code Splitting
+1. **Red Mars** (1992) - The initial colonization
+2. **Green Mars** (1993) - The terraforming process begins  
+3. **Blue Mars** (1996) - The completion of terraforming
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Contributing
 
-### Analyzing the Bundle Size
+Contributions are welcome! Please feel free to submit a Pull Request. Areas where help is needed:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- Adding more locations from Blue Mars
+- Improving coordinate accuracy
+- Adding more detailed descriptions
+- UI/UX improvements
 
-### Making a Progressive Web App
+## License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+This project is open source and available under the [MIT License](LICENSE).
 
-### Advanced Configuration
+## Acknowledgments
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Kim Stanley Robinson for creating the Mars trilogy
+- OpenPlanetaryMap for providing Mars satellite imagery
+- The Leaflet community for excellent mapping tools

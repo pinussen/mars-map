@@ -1,0 +1,44 @@
+[
+  {
+    "Location": "Underhill",
+    "Latitude": 3.864254,
+    "Longitude": -69.345703,
+    "Description": "First Martian city, approximate location near Hebes Chasma"
+  },
+  {
+    "Location": "Burroughs",
+    "Latitude": -72.5,
+    "Longitude": 243.1,
+    "Description": "Second Martian capital city, located in a large crater"
+  },
+  {
+    "Location": "Acheron Fossae",
+    "Latitude": 38.125,
+    "Longitude": 227.235,
+    "Description": "Biomedical and biotechnology research center, a trough in the Diacria quadrangle"
+  },
+  {
+    "Location": "Nirgal Vallis",
+    "Latitude": -28.4,
+    "Longitude": 42.0,
+    "Description": "Huge tenting over an entire canyon, a long river channel"
+  },
+  {
+    "Location": "Dao Vallis",
+    "Latitude": -38.7,
+    "Longitude": 272.1,
+    "Description": "Huge tenting over an entire canyon, runs southwestward into Hellas Planitia"
+  },
+  {
+    "Location": "Tharsis Tholus",
+    "Latitude": 13.5,
+    "Longitude": -91.0,
+    "Description": "Intermediate-sized shield volcano, part of the demimonde"
+  },
+  {
+    "Location": "Sabishii",
+    "Latitude": -15.0,
+    "Longitude": 275.0,
+    "Description": "Home of Sabishii University, located in Tyrrhena Patera near Jarry-Desloges Crater"
+  }
+]

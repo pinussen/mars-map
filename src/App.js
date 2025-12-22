@@ -1,12 +1,25 @@
 import React, { useState } from 'react';
 import './App.css';
 import Map from './Map';
+import SimpleTest from './SimpleTest';
 import locations from './locations.json';
 
 function App() {
   const [filteredLocations, setFilteredLocations] = useState(locations);
   const [mapError, setMapError] = useState(false);
   const [selectedBook, setSelectedBook] = useState('all');
+  const [showTest, setShowTest] = useState(false);
+
+  // Debug: Log locations on mount
+  React.useEffect(() => {
+    console.log('Locations loaded:', locations);
+    console.log('Total locations:', locations.length);
+  }, []);
+
+  // Show simple test if there are issues
+  if (showTest) {
+    return <SimpleTest />;
+  }
 
   const handleSearch = (event) => {
     const query = event.target.value.toLowerCase();
@@ -16,7 +29,8 @@ function App() {
   const handleBookFilter = (event) => {
     const book = event.target.value;
     setSelectedBook(book);
-    const searchQuery = document.querySelector('.search-bar').value.toLowerCase();
+    const searchInput = document.querySelector('.search-bar');
+    const searchQuery = searchInput ? searchInput.value.toLowerCase() : '';
     filterLocations(searchQuery, book);
   };
 
@@ -48,6 +62,9 @@ function App() {
       <div className="header">
         <h1>Mars Trilogy Interactive Map</h1>
         <p>Explore locations from Kim Stanley Robinson's Mars trilogy</p>
+        <button onClick={() => setShowTest(!showTest)} style={{ margin: '10px', padding: '5px 10px' }}>
+          {showTest ? 'Show Map' : 'Show Test'}
+        </button>
       </div>
       
       <div className="controls">
@@ -74,21 +91,23 @@ function App() {
         Showing {filteredLocations.length} of {locations.length} locations
       </div>
       
-      <Map locations={filteredLocations} onError={() => setMapError(true)} />
-      
-      <div className="legend">
-        <h4>Book Legend</h4>
-        <div className="legend-item">
-          <div className="legend-color" style={{backgroundColor: '#ff4444'}}></div>
-          Red Mars
-        </div>
-        <div className="legend-item">
-          <div className="legend-color" style={{backgroundColor: '#44ff44'}}></div>
-          Green Mars
-        </div>
-        <div className="legend-item">
-          <div className="legend-color" style={{backgroundColor: '#4444ff'}}></div>
-          Blue Mars
+      <div style={{ flex: 1, position: 'relative' }}>
+        <Map locations={filteredLocations} onError={() => setMapError(true)} />
+        
+        <div className="legend">
+          <h4>Book Legend</h4>
+          <div className="legend-item">
+            <div className="legend-color" style={{backgroundColor: '#ff4444'}}></div>
+            Red Mars
+          </div>
+          <div className="legend-item">
+            <div className="legend-color" style={{backgroundColor: '#44ff44'}}></div>
+            Green Mars
+          </div>
+          <div className="legend-item">
+            <div className="legend-color" style={{backgroundColor: '#4444ff'}}></div>
+            Blue Mars
+          </div>
         </div>
       </div>
     </div>

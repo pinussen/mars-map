@@ -61,7 +61,9 @@ const Map = ({ locations, onError }) => {
         <TileLayer
           url="https://s3-eu-west-1.amazonaws.com/whereonmars.cartodb.net/celestia_mars-shaded-16k_global/{z}/{x}/{y}.png"
           attribution='&copy; <a href="https://www.openplanetary.org/">OpenPlanetaryMap</a> - Mars Surface'
-          onError={handleTileError}
+          eventHandlers={{
+            error: handleTileError,
+          }}
           maxZoom={8}
           minZoom={1}
         />

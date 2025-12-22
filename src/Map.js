@@ -59,22 +59,10 @@ const getLineStyle = (item) => {
 
 // Filter infrastructure by year
 const getInfrastructureForYear = (year) => {
-  const infrastructureYears = {
-    'Space Elevator Cable': 2055,
-    'Elevator Debris Field': 2061,
-    'Underground Tunnel Network': 2085,
-    'Polar Express': 2090,
-    'Trans-Martian Railway': 2130,
-    'Northern Ocean Railway': 2160,
-    'Valles Marineris Highway': 2170,
-    'Tharsis Ring Road': 2175,
-    'Hellas Sea Coastal Road': 2180,
-    'Areosynchronous Orbital Path': 2055
-  };
-
   return infrastructure.filter(item => {
-    const itemYear = infrastructureYears[item.name] || 2200;
-    return itemYear <= year;
+    const startYear = item.startYear || 2200;
+    const endYear = item.endYear || 2200;
+    return year >= startYear && year <= endYear;
   });
 };
 

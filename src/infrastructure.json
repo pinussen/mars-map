@@ -4,12 +4,36 @@
     "type": "cable",
     "coordinates": [
       [0.0, -132.58],
-      [0.0, -132.58]
+      [5.0, -132.58],
+      [10.0, -132.58],
+      [15.0, -132.58],
+      [20.0, -132.58]
     ],
-    "description": "Remains of the fallen space elevator from Pavonis Mons",
+    "description": "The space elevator cable extending from Pavonis Mons to orbit",
+    "book": "Red Mars",
+    "color": "#00ff00",
+    "style": "solid",
+    "startYear": 2055,
+    "endYear": 2061
+  },
+  {
+    "name": "Elevator Debris Field",
+    "type": "debris",
+    "coordinates": [
+      [0.0, -132.58],
+      [5.0, -130.0],
+      [10.0, -125.0],
+      [15.0, -120.0],
+      [20.0, -115.0],
+      [25.0, -110.0],
+      [30.0, -105.0]
+    ],
+    "description": "Scattered remains of the space elevator after its fall in 2061",
     "book": "Green Mars",
-    "color": "#ff0000",
-    "style": "dashed"
+    "color": "#ff4444",
+    "style": "dotted",
+    "startYear": 2061,
+    "endYear": 2200
   },
   {
     "name": "Trans-Martian Railway",
@@ -23,7 +47,9 @@
     "description": "Main railway connecting Sheffield, Burroughs, Olympus Mons, and Sabishii",
     "book": "Blue Mars",
     "color": "#333333",
-    "style": "solid"
+    "style": "solid",
+    "startYear": 2130,
+    "endYear": 2200
   },
   {
     "name": "Northern Ocean Railway",
@@ -37,7 +63,9 @@
     "description": "Railway connecting northern ocean ports",
     "book": "Blue Mars",
     "color": "#333333",
-    "style": "solid"
+    "style": "solid",
+    "startYear": 2160,
+    "endYear": 2200
   },
   {
     "name": "Valles Marineris Highway",
@@ -52,7 +80,9 @@
     "description": "Major highway through the grand canyon system",
     "book": "Blue Mars",
     "color": "#8B4513",
-    "style": "solid"
+    "style": "solid",
+    "startYear": 2170,
+    "endYear": 2200
   },
   {
     "name": "Tharsis Ring Road",
@@ -67,7 +97,9 @@
     "description": "Circular highway connecting the major Tharsis volcanoes",
     "book": "Blue Mars",
     "color": "#8B4513",
-    "style": "solid"
+    "style": "solid",
+    "startYear": 2175,
+    "endYear": 2200
   },
   {
     "name": "Hellas Sea Coastal Road",
@@ -82,7 +114,9 @@
     "description": "Coastal highway around the Hellas Sea",
     "book": "Blue Mars",
     "color": "#8B4513",
-    "style": "solid"
+    "style": "solid",
+    "startYear": 2180,
+    "endYear": 2200
   },
   {
     "name": "Polar Express",
@@ -97,22 +131,9 @@
     "description": "Railway connecting southern polar settlements",
     "book": "Green Mars",
     "color": "#333333",
-    "style": "solid"
-  },
-  {
-    "name": "Elevator Debris Field",
-    "type": "debris",
-    "coordinates": [
-      [0.0, -132.58],
-      [5.0, -130.0],
-      [10.0, -125.0],
-      [15.0, -120.0],
-      [20.0, -115.0]
-    ],
-    "description": "Scattered remains of the space elevator after its fall",
-    "book": "Green Mars",
-    "color": "#ff4444",
-    "style": "dotted"
+    "style": "solid",
+    "startYear": 2090,
+    "endYear": 2200
   },
   {
     "name": "Underground Tunnel Network",
@@ -126,7 +147,9 @@
     "description": "Secret underground connections between polar settlements",
     "book": "Green Mars",
     "color": "#666666",
-    "style": "dashed"
+    "style": "dashed",
+    "startYear": 2085,
+    "endYear": 2200
   },
   {
     "name": "Areosynchronous Orbital Path",
@@ -137,6 +160,8 @@
     "description": "Orbital path of the space elevator counterweight",
     "book": "Red Mars",
     "color": "#00ff00",
-    "style": "dashed"
+    "style": "dashed",
+    "startYear": 2055,
+    "endYear": 2061
   }
 ]

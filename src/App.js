@@ -90,13 +90,14 @@ function App() {
           />
           <div className="time-markers">
             <span>2027</span>
-            <span>2061</span>
+            <span className="war-marker">2061 ⚔️</span>
             <span>2127</span>
             <span>2200</span>
           </div>
         </div>
         <div className="terraforming-status">
-          {currentWaterLevel.description}
+          {currentYear === 2061 && "🔥 First Martian Revolution - Space Elevator Falls"}
+          {currentYear !== 2061 && currentWaterLevel.description}
         </div>
       </div>
       

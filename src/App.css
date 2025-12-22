@@ -109,6 +109,11 @@
   color: #ccc;
 }
 
+.war-marker {
+  color: #ff4444 !important;
+  font-weight: bold;
+}
+
 .terraforming-status {
   text-align: center;
   font-size: 11px;

@@ -191,14 +191,14 @@ const SimpleMarsGlobe = ({ locations, onLocationClick }) => {
     };
 
     const onMouseMove = (event) => {
-      if (isDragging) {
+      if (isDragging && globeRef.current) {
         const deltaMove = {
           x: event.clientX - previousMousePosition.x,
           y: event.clientY - previousMousePosition.y
         };
 
-        globe.rotation.y += deltaMove.x * 0.01;
-        globe.rotation.x += deltaMove.y * 0.01;
+        globeRef.current.rotation.y += deltaMove.x * 0.01;
+        globeRef.current.rotation.x += deltaMove.y * 0.01;
 
         previousMousePosition = { x: event.clientX, y: event.clientY };
       }
@@ -223,8 +223,8 @@ const SimpleMarsGlobe = ({ locations, onLocationClick }) => {
       requestAnimationFrame(animate);
       
       // Auto-rotate
-      if (!isDragging) {
-        globe.rotation.y += 0.002;
+      if (!isDragging && globeRef.current) {
+        globeRef.current.rotation.y += 0.002;
       }
       
       renderer.render(scene, camera);

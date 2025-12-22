@@ -45,53 +45,55 @@ function App() {
   }, {});
 
   return (
-    <div style={{ width: '100vw', height: '100vh', display: 'flex', flexDirection: 'column' }}>
-      <div className="header">
-        <h1>Mars Trilogy Interactive Map</h1>
-        <p>Explore locations from Kim Stanley Robinson's Mars trilogy</p>
+    <div style={{ width: '100vw', height: '100vh', position: 'relative' }}>
+      {/* Map takes full screen */}
+      <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0 }}>
+        <Map locations={filteredLocations} onError={() => setMapError(true)} />
       </div>
       
-      <div className="controls">
+      {/* Compact header overlay */}
+      <div className="header-overlay">
+        <h1>Mars Trilogy Map</h1>
+      </div>
+      
+      {/* Compact controls overlay */}
+      <div className="controls-overlay">
         <input
           type="text"
-          className="search-bar"
-          placeholder="Search for a location..."
+          className="search-bar-compact"
+          placeholder="Search locations..."
           onChange={handleSearch}
         />
         
-        <select className="book-filter" value={selectedBook} onChange={handleBookFilter}>
-          <option value="all">All Books ({locations.length} locations)</option>
+        <select className="book-filter-compact" value={selectedBook} onChange={handleBookFilter}>
+          <option value="all">All ({locations.length})</option>
           {books.map(book => (
             <option key={book} value={book}>
-              {book} ({bookCounts[book]} locations)
+              {book} ({bookCounts[book]})
             </option>
           ))}
         </select>
-      </div>
-      
-      {mapError && <p className="error">Map tiles failed to load. Check your connection or the tile server status.</p>}
-      
-      <div className="location-count">
-        Showing {filteredLocations.length} of {locations.length} locations
-      </div>
-      
-      <div style={{ flex: 1, position: 'relative' }}>
-        <Map locations={filteredLocations} onError={() => setMapError(true)} />
         
-        <div className="legend">
-          <h4>Book Legend</h4>
-          <div className="legend-item">
-            <div className="legend-color" style={{backgroundColor: '#ff4444'}}></div>
-            Red Mars
-          </div>
-          <div className="legend-item">
-            <div className="legend-color" style={{backgroundColor: '#44ff44'}}></div>
-            Green Mars
-          </div>
-          <div className="legend-item">
-            <div className="legend-color" style={{backgroundColor: '#4444ff'}}></div>
-            Blue Mars
-          </div>
+        <div className="location-count-compact">
+          {filteredLocations.length} / {locations.length}
+        </div>
+      </div>
+      
+      {mapError && <p className="error">Map tiles failed to load.</p>}
+      
+      {/* Legend overlay */}
+      <div className="legend-overlay">
+        <div className="legend-item-compact">
+          <div className="legend-color" style={{backgroundColor: '#ff4444'}}></div>
+          Red Mars
+        </div>
+        <div className="legend-item-compact">
+          <div className="legend-color" style={{backgroundColor: '#44ff44'}}></div>
+          Green Mars
+        </div>
+        <div className="legend-item-compact">
+          <div className="legend-color" style={{backgroundColor: '#4444ff'}}></div>
+          Blue Mars
         </div>
       </div>
     </div>

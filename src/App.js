@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
 import Map from './Map';
-import MarsGlobe from './MarsGlobe';
+import SimpleMarsGlobe from './SimpleMarsGlobe';
 import SimpleTest from './SimpleTest';
 import locations from './locations.json';
 
@@ -130,7 +130,7 @@ function App() {
             </div>
           </>
         ) : (
-          <MarsGlobe 
+          <SimpleMarsGlobe 
             locations={filteredLocations} 
             onLocationClick={(location) => {
               console.log('Selected location:', location);

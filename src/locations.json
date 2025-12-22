@@ -70,6 +70,20 @@
     "Book": "Red Mars"
   },
   {
+    "Location": "Nicosia",
+    "Latitude": 5.0,
+    "Longitude": -130.0,
+    "Description": "Tented city where John Boone was murdered during inauguration festival",
+    "Book": "Red Mars"
+  },
+  {
+    "Location": "Cairo",
+    "Latitude": -10.0,
+    "Longitude": -132.0,
+    "Description": "Big city south of Pavonis Mons, 10 km above datum",
+    "Book": "Red Mars"
+  },
+  {
     "Location": "Dorsa Brevia",
     "Latitude": -75.0,
     "Longitude": 0.0,
@@ -138,5 +152,292 @@
     "Longitude": -110.0,
     "Description": "Rumored to have been founded by Hiroko Ai after Sabishii was burned",
     "Book": "Green Mars"
+  },
+  {
+    "Location": "Kasei Vallis",
+    "Latitude": 24.6,
+    "Longitude": -65.0,
+    "Description": "Security center and police training camp, where Sax Russell was tortured",
+    "Book": "Green Mars"
+  },
+  {
+    "Location": "Pavonis Mons",
+    "Latitude": 0.0,
+    "Longitude": -112.8,
+    "Description": "Massive shield volcano, site of constitutional congress and space elevator",
+    "Book": "Blue Mars"
+  },
+  {
+    "Location": "Olympus Mons",
+    "Latitude": 18.65,
+    "Longitude": -133.8,
+    "Description": "Largest volcano in the solar system, major landmark and settlement area",
+    "Book": "Blue Mars"
+  },
+  {
+    "Location": "Ascraeus Mons",
+    "Latitude": 11.9,
+    "Longitude": -104.5,
+    "Description": "Northern volcano of Tharsis Montes, major settlement",
+    "Book": "Blue Mars"
+  },
+  {
+    "Location": "Arsia Mons",
+    "Latitude": -9.0,
+    "Longitude": -121.0,
+    "Description": "Southern volcano of Tharsis Montes, terraforming center",
+    "Book": "Blue Mars"
+  },
+  {
+    "Location": "Mangala",
+    "Latitude": -5.0,
+    "Longitude": -150.0,
+    "Description": "Major city in the Amazonis region, cultural center",
+    "Book": "Blue Mars"
+  },
+  {
+    "Location": "Elysium",
+    "Latitude": 25.0,
+    "Longitude": 147.0,
+    "Description": "Settlement on Elysium Mons, second major volcanic region",
+    "Book": "Blue Mars"
+  },
+  {
+    "Location": "Margaritifer Sinus",
+    "Latitude": -15.0,
+    "Longitude": -25.0,
+    "Description": "Ancient impact basin, now a major agricultural region",
+    "Book": "Blue Mars"
+  },
+  {
+    "Location": "Chryse Planitia",
+    "Latitude": 22.0,
+    "Longitude": -50.0,
+    "Description": "Northern plains settlement, Viking 1 landing site memorial",
+    "Book": "Blue Mars"
+  },
+  {
+    "Location": "Vastitas Borealis",
+    "Latitude": 70.0,
+    "Longitude": 0.0,
+    "Description": "Northern ocean settlement, major port city",
+    "Book": "Blue Mars"
+  },
+  {
+    "Location": "Valles Marineris",
+    "Latitude": -14.0,
+    "Longitude": -59.0,
+    "Description": "Grand canyon of Mars, multiple settlements along its length",
+    "Book": "Blue Mars"
+  },
+  {
+    "Location": "Argyre Planitia",
+    "Latitude": -50.0,
+    "Longitude": -43.0,
+    "Description": "Southern impact basin, major agricultural and residential area",
+    "Book": "Blue Mars"
+  },
+  {
+    "Location": "Zygote",
+    "Latitude": -83.0,
+    "Longitude": 45.0,
+    "Description": "Hidden refuge in the South polar region, home of the Areophany",
+    "Book": "Red Mars"
+  },
+  {
+    "Location": "Gamete",
+    "Latitude": -83.0,
+    "Longitude": 45.0,
+    "Description": "Zygote renamed, Hiroko's hidden community",
+    "Book": "Green Mars"
+  },
+  {
+    "Location": "Korolyov",
+    "Latitude": -73.0,
+    "Longitude": 165.0,
+    "Description": "Prison city used by UNOMA, ruined during First Martian Revolution",
+    "Book": "Red Mars"
+  },
+  {
+    "Location": "Bradbury Point",
+    "Latitude": 65.0,
+    "Longitude": -45.0,
+    "Description": "Settlement at Nilosyrtis Mensae, financed by Armscor",
+    "Book": "Red Mars"
+  },
+  {
+    "Location": "Senzeni Na",
+    "Latitude": -14.0,
+    "Longitude": -70.0,
+    "Description": "Mining mohole establishment near Thaumasia",
+    "Book": "Red Mars"
+  },
+  {
+    "Location": "Dolmen Tor",
+    "Latitude": -6.0,
+    "Longitude": -30.0,
+    "Description": "Underground caves at Aureum Chaos, early Areophany hideout",
+    "Book": "Red Mars"
+  },
+  {
+    "Location": "Overhangs",
+    "Latitude": -79.0,
+    "Longitude": -30.0,
+    "Description": "Swiss settlement, part of the underground, shot down by UNTA",
+    "Book": "Green Mars"
+  },
+  {
+    "Location": "Gramsci",
+    "Latitude": -76.5,
+    "Longitude": -15.0,
+    "Description": "Settlement near South pole, part of the underground",
+    "Book": "Green Mars"
+  },
+  {
+    "Location": "Mauss Hyde",
+    "Latitude": -75.5,
+    "Longitude": 90.0,
+    "Description": "Settlement near South pole, grew plants for the underground",
+    "Book": "Green Mars"
+  },
+  {
+    "Location": "Hell's Gate",
+    "Latitude": -42.0,
+    "Longitude": -70.0,
+    "Description": "Main city in Dao Vallis, at the Hellas Basin",
+    "Book": "Green Mars"
+  },
+  {
+    "Location": "Sukhumi",
+    "Latitude": -41.0,
+    "Longitude": -65.0,
+    "Description": "Main city in Harmakhis-Reull system at Hellas Basin",
+    "Book": "Green Mars"
+  },
+  {
+    "Location": "Harmakhis Vallis",
+    "Latitude": -38.5,
+    "Longitude": -95.5,
+    "Description": "Huge tented canyon system with river ecosystem",
+    "Book": "Green Mars"
+  },
+  {
+    "Location": "Reull Vallis",
+    "Latitude": -41.0,
+    "Longitude": -101.0,
+    "Description": "Canyon system intersecting with Harmakhis Vallis",
+    "Book": "Green Mars"
+  },
+  {
+    "Location": "Noctis Labyrinthus",
+    "Latitude": -7.0,
+    "Longitude": -100.0,
+    "Description": "Maze of canyons west of Valles Marineris, major settlement area",
+    "Book": "Blue Mars"
+  },
+  {
+    "Location": "Mariner Valley",
+    "Latitude": -14.0,
+    "Longitude": -59.0,
+    "Description": "Alternative name for Valles Marineris, grand canyon system",
+    "Book": "Blue Mars"
+  },
+  {
+    "Location": "Coprates Chasma",
+    "Latitude": -13.0,
+    "Longitude": -61.0,
+    "Description": "Central section of Valles Marineris, major canyon settlement",
+    "Book": "Blue Mars"
+  },
+  {
+    "Location": "Ius Chasma",
+    "Latitude": -7.0,
+    "Longitude": -85.0,
+    "Description": "Western section of Valles Marineris canyon system",
+    "Book": "Blue Mars"
+  },
+  {
+    "Location": "Melas Chasma",
+    "Latitude": -10.0,
+    "Longitude": -72.0,
+    "Description": "Widest part of Valles Marineris, major population center",
+    "Book": "Blue Mars"
+  },
+  {
+    "Location": "Candor Chasma",
+    "Latitude": -6.0,
+    "Longitude": -75.0,
+    "Description": "Northern branch of Valles Marineris, terraforming center",
+    "Book": "Blue Mars"
+  },
+  {
+    "Location": "Ophir Chasma",
+    "Latitude": -4.0,
+    "Longitude": -72.0,
+    "Description": "Northern canyon of Valles Marineris system",
+    "Book": "Blue Mars"
+  },
+  {
+    "Location": "Tithonium Chasma",
+    "Latitude": -5.0,
+    "Longitude": -84.0,
+    "Description": "Northwestern section of Valles Marineris",
+    "Book": "Blue Mars"
+  },
+  {
+    "Location": "Amazonis Planitia",
+    "Latitude": 15.0,
+    "Longitude": -158.0,
+    "Description": "Northern plains region, major agricultural area",
+    "Book": "Blue Mars"
+  },
+  {
+    "Location": "Acidalia Planitia",
+    "Latitude": 45.0,
+    "Longitude": -22.0,
+    "Description": "Northern lowlands, part of the great northern ocean",
+    "Book": "Blue Mars"
+  },
+  {
+    "Location": "Utopia Planitia",
+    "Latitude": 50.0,
+    "Longitude": 117.0,
+    "Description": "Large northern plain, Viking 2 landing site region",
+    "Book": "Blue Mars"
+  },
+  {
+    "Location": "Isidis Planitia",
+    "Latitude": 12.0,
+    "Longitude": 87.0,
+    "Description": "Impact basin where Burroughs is located",
+    "Book": "Blue Mars"
+  },
+  {
+    "Location": "Syrtis Major",
+    "Latitude": 8.0,
+    "Longitude": 69.0,
+    "Description": "Dark albedo feature, major landmark and settlement area",
+    "Book": "Blue Mars"
+  },
+  {
+    "Location": "Tyrrhena Patera",
+    "Latitude": -22.0,
+    "Longitude": 106.0,
+    "Description": "Ancient volcano near Sabishii, major geological feature",
+    "Book": "Red Mars"
+  },
+  {
+    "Location": "Hadriaca Patera",
+    "Latitude": -32.0,
+    "Longitude": 92.0,
+    "Description": "Ancient volcano, source of Dao and Niger Vallis",
+    "Book": "Green Mars"
+  },
+  {
+    "Location": "Alba Patera",
+    "Latitude": 40.0,
+    "Longitude": -110.0,
+    "Description": "Largest volcano by area, low shield volcano",
+    "Book": "Blue Mars"
   }
 ]

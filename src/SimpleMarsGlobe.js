@@ -6,6 +6,7 @@ const SimpleMarsGlobe = ({ locations, onLocationClick }) => {
   const rendererRef = useRef(null);
   const globeRef = useRef(null);
   const markersRef = useRef([]);
+  const [isLoaded, setIsLoaded] = useState(false);
 
   const latLngToVector3 = (lat, lng, radius = 1.02) => {
     const THREE = window.THREE;
@@ -59,6 +60,49 @@ const SimpleMarsGlobe = ({ locations, onLocationClick }) => {
     const THREE = window.THREE;
     if (!THREE || !mountRef.current) return;
 
+    // Create fallback Mars texture function
+    const createMarsTexture = () => {
+      const canvas = document.createElement('canvas');
+      canvas.width = 1024;
+      canvas.height = 512;
+      const context = canvas.getContext('2d');
+      
+      // Create a more detailed Mars-like surface
+      // Base color
+      context.fillStyle = '#CD853F';
+      context.fillRect(0, 0, 1024, 512);
+      
+      // Add polar ice caps (lighter areas at top and bottom)
+      const polarGradient = context.createRadialGradient(512, 0, 0, 512, 0, 100);
+      polarGradient.addColorStop(0, 'rgba(255, 255, 255, 0.3)');
+      polarGradient.addColorStop(1, 'rgba(255, 255, 255, 0)');
+      context.fillStyle = polarGradient;
+      context.fillRect(0, 0, 1024, 100);
+      
+      const southPolarGradient = context.createRadialGradient(512, 512, 0, 512, 512, 100);
+      southPolarGradient.addColorStop(0, 'rgba(255, 255, 255, 0.3)');
+      southPolarGradient.addColorStop(1, 'rgba(255, 255, 255, 0)');
+      context.fillStyle = southPolarGradient;
+      context.fillRect(0, 412, 1024, 100);
+      
+      // Add some darker regions (like Syrtis Major)
+      context.fillStyle = 'rgba(139, 69, 19, 0.4)';
+      context.fillRect(200, 150, 300, 200);
+      context.fillRect(600, 200, 200, 150);
+      
+      // Add surface details
+      for (let i = 0; i < 2000; i++) {
+        const x = Math.random() * 1024;
+        const y = Math.random() * 512;
+        const size = Math.random() * 3;
+        const brightness = Math.random() * 0.3;
+        context.fillStyle = `rgba(${205 + Math.random() * 50}, ${133 + Math.random() * 40}, ${63 + Math.random() * 30}, ${brightness})`;
+        context.fillRect(x, y, size, size);
+      }
+      
+      return new THREE.CanvasTexture(canvas);
+    };
+
     // Scene setup
     const scene = new THREE.Scene();
     sceneRef.current = scene;
@@ -82,37 +126,37 @@ const SimpleMarsGlobe = ({ locations, onLocationClick }) => {
     // Mars globe
     const geometry = new THREE.SphereGeometry(1, 64, 32);
     
-    // Create Mars-like material
-    const canvas = document.createElement('canvas');
-    canvas.width = 1024;
-    canvas.height = 512;
-    const context = canvas.getContext('2d');
+    // Load real Mars texture
+    const textureLoader = new THREE.TextureLoader();
     
-    // Mars surface gradient
-    const gradient = context.createLinearGradient(0, 0, 0, 512);
-    gradient.addColorStop(0, '#CD853F');
-    gradient.addColorStop(0.3, '#A0522D');
-    gradient.addColorStop(0.6, '#8B4513');
-    gradient.addColorStop(1, '#654321');
+    // Try to load a real Mars texture, with fallback
+    const marsTextureUrl = 'https://www.solarsystemscope.com/textures/download/2k_mars.jpg';
     
-    context.fillStyle = gradient;
-    context.fillRect(0, 0, 1024, 512);
-    
-    // Add texture noise
-    for (let i = 0; i < 3000; i++) {
-      const x = Math.random() * 1024;
-      const y = Math.random() * 512;
-      const size = Math.random() * 2;
-      context.fillStyle = `rgba(${139 + Math.random() * 50}, ${69 + Math.random() * 30}, ${19 + Math.random() * 20}, 0.2)`;
-      context.fillRect(x, y, size, size);
-    }
-    
-    const texture = new THREE.CanvasTexture(canvas);
-    const material = new THREE.MeshPhongMaterial({ map: texture });
-    
-    const globe = new THREE.Mesh(geometry, material);
-    scene.add(globe);
-    globeRef.current = globe;
+    textureLoader.load(
+      marsTextureUrl,
+      // Success callback
+      (texture) => {
+        const material = new THREE.MeshPhongMaterial({ map: texture });
+        const globe = new THREE.Mesh(geometry, material);
+        scene.add(globe);
+        globeRef.current = globe;
+        updateMarkers();
+        setIsLoaded(true);
+      },
+      // Progress callback
+      undefined,
+      // Error callback - fallback to procedural texture
+      (error) => {
+        console.log('Failed to load Mars texture, using fallback:', error);
+        const fallbackTexture = createMarsTexture();
+        const material = new THREE.MeshPhongMaterial({ map: fallbackTexture });
+        const globe = new THREE.Mesh(geometry, material);
+        scene.add(globe);
+        globeRef.current = globe;
+        updateMarkers();
+        setIsLoaded(true);
+      }
+    );
 
     // Lighting
     const ambientLight = new THREE.AmbientLight(0x404040, 0.4);
@@ -197,7 +241,7 @@ const SimpleMarsGlobe = ({ locations, onLocationClick }) => {
     };
     window.addEventListener('resize', handleResize);
 
-    updateMarkers();
+    // Don't call updateMarkers or setIsLoaded here - it's handled in texture loading
   }, [updateMarkers]);
 
   useEffect(() => {
@@ -241,39 +285,46 @@ const SimpleMarsGlobe = ({ locations, onLocationClick }) => {
       />
       
       {/* Instructions */}
-      <div style={{
-        position: 'absolute',
-        top: '10px',
-        left: '10px',
-        color: 'white',
-        background: 'rgba(0,0,0,0.8)',
-        padding: '15px',
-        borderRadius: '8px',
-        fontSize: '12px',
-        maxWidth: '200px'
-      }}>
-        <h4 style={{ margin: '0 0 10px 0', color: '#ff6b35' }}>Mars Globe Controls</h4>
-        <p style={{ margin: '2px 0' }}>• Drag to rotate Mars</p>
-        <p style={{ margin: '2px 0' }}>• Scroll to zoom in/out</p>
-        <p style={{ margin: '2px 0' }}>• Colored dots show locations</p>
-        <p style={{ margin: '5px 0 0 0', fontSize: '10px', opacity: 0.8 }}>
-          Red = Red Mars, Green = Green Mars, Blue = Blue Mars
-        </p>
-      </div>
+      {isLoaded && (
+        <div style={{
+          position: 'absolute',
+          top: '10px',
+          left: '10px',
+          color: 'white',
+          background: 'rgba(0,0,0,0.8)',
+          padding: '15px',
+          borderRadius: '8px',
+          fontSize: '12px',
+          maxWidth: '200px'
+        }}>
+          <h4 style={{ margin: '0 0 10px 0', color: '#ff6b35' }}>Mars Globe Controls</h4>
+          <p style={{ margin: '2px 0' }}>• Drag to rotate Mars</p>
+          <p style={{ margin: '2px 0' }}>• Scroll to zoom in/out</p>
+          <p style={{ margin: '2px 0' }}>• Colored dots show locations</p>
+          <p style={{ margin: '5px 0 0 0', fontSize: '10px', opacity: 0.8 }}>
+            Red = Red Mars, Green = Green Mars, Blue = Blue Mars
+          </p>
+        </div>
+      )}
 
       {/* Loading message */}
-      <div style={{
-        position: 'absolute',
-        top: '50%',
-        left: '50%',
-        transform: 'translate(-50%, -50%)',
-        color: 'white',
-        fontSize: '18px',
-        textAlign: 'center'
-      }}>
-        <p>Loading Mars Globe...</p>
-        <p style={{ fontSize: '12px', opacity: 0.7 }}>Loading Three.js library</p>
-      </div>
+      {!isLoaded && (
+        <div style={{
+          position: 'absolute',
+          top: '50%',
+          left: '50%',
+          transform: 'translate(-50%, -50%)',
+          color: 'white',
+          fontSize: '18px',
+          textAlign: 'center',
+          background: 'rgba(0,0,0,0.8)',
+          padding: '20px',
+          borderRadius: '10px'
+        }}>
+          <p>Loading Mars Globe...</p>
+          <p style={{ fontSize: '12px', opacity: 0.7 }}>Loading Three.js library</p>
+        </div>
+      )}
     </div>
   );
 };

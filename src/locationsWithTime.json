@@ -8,12 +8,20 @@
     "Year": 2027
   },
   {
-    "Location": "Zygote",
-    "Latitude": -83.0,
-    "Longitude": 45.0,
-    "Description": "Hidden refuge in the South polar region, home of the Areophany",
+    "Location": "Phobos Station",
+    "Latitude": 0.0,
+    "Longitude": 0.0,
+    "Description": "Space station on Mars' moon Phobos, transportation hub",
     "Book": "Red Mars",
-    "Year": 2040
+    "Year": 2028
+  },
+  {
+    "Location": "Tyrrhena Patera",
+    "Latitude": -22.0,
+    "Longitude": 106.0,
+    "Description": "Ancient volcano near Sabishii, major geological feature",
+    "Book": "Red Mars",
+    "Year": 2030
   },
   {
     "Location": "Acheron Fossae",
@@ -24,20 +32,44 @@
     "Year": 2035
   },
   {
-    "Location": "Sheffield",
-    "Latitude": 0.0,
-    "Longitude": -132.58,
-    "Description": "Home of the Martian end of the space elevator, on Pavonis Mons",
+    "Location": "Dolmen Tor",
+    "Latitude": -6.0,
+    "Longitude": -30.0,
+    "Description": "Underground caves at Aureum Chaos, early Areophany hideout",
     "Book": "Red Mars",
-    "Year": 2055
+    "Year": 2035
   },
   {
-    "Location": "Burroughs",
-    "Latitude": 22.5,
-    "Longitude": 49.97,
-    "Description": "Second Martian capital city, located in Isidis Planitia",
+    "Location": "Senzeni Na",
+    "Latitude": -14.0,
+    "Longitude": -70.0,
+    "Description": "Mining mohole establishment near Thaumasia",
     "Book": "Red Mars",
-    "Year": 2050
+    "Year": 2038
+  },
+  {
+    "Location": "Zygote",
+    "Latitude": -83.0,
+    "Longitude": 45.0,
+    "Description": "Hidden refuge in the South polar region, home of the Areophany",
+    "Book": "Red Mars",
+    "Year": 2040
+  },
+  {
+    "Location": "Korolyov",
+    "Latitude": -73.0,
+    "Longitude": 165.0,
+    "Description": "Prison city used by UNOMA, ruined during First Martian Revolution",
+    "Book": "Red Mars",
+    "Year": 2040
+  },
+  {
+    "Location": "Bradbury Point",
+    "Latitude": 65.0,
+    "Longitude": -45.0,
+    "Description": "Settlement at Nilosyrtis Mensae, financed by Armscor",
+    "Book": "Red Mars",
+    "Year": 2042
   },
   {
     "Location": "Sabishii",
@@ -56,6 +88,14 @@
     "Year": 2048
   },
   {
+    "Location": "Burroughs",
+    "Latitude": 22.5,
+    "Longitude": 49.97,
+    "Description": "Second Martian capital city, located in Isidis Planitia",
+    "Book": "Red Mars",
+    "Year": 2050
+  },
+  {
     "Location": "Carr",
     "Latitude": -22.48,
     "Longitude": -23.1,
@@ -64,12 +104,12 @@
     "Year": 2052
   },
   {
-    "Location": "Nicosia",
-    "Latitude": 5.0,
-    "Longitude": -130.0,
-    "Description": "Tented city where John Boone was murdered during inauguration festival",
+    "Location": "Sheffield",
+    "Latitude": 0.0,
+    "Longitude": -132.58,
+    "Description": "Home of the Martian end of the space elevator, on Pavonis Mons",
     "Book": "Red Mars",
-    "Year": 2058
+    "Year": 2055
   },
   {
     "Location": "Cairo",
@@ -80,20 +120,12 @@
     "Year": 2056
   },
   {
-    "Location": "Phobos Station",
-    "Latitude": 0.0,
-    "Longitude": 0.0,
-    "Description": "Space station on Mars' moon Phobos, transportation hub",
+    "Location": "Nicosia",
+    "Latitude": 5.0,
+    "Longitude": -130.0,
+    "Description": "Tented city where John Boone was murdered during inauguration festival",
     "Book": "Red Mars",
-    "Year": 2028
-  },
-  {
-    "Location": "Dorsa Brevia",
-    "Latitude": -75.0,
-    "Longitude": 0.0,
-    "Description": "Hidden settlement near South pole, home of the Dorsa Brevia Conference",
-    "Book": "Green Mars",
-    "Year": 2085
+    "Year": 2058
   },
   {
     "Location": "Vishniac",
@@ -104,6 +136,134 @@
     "Year": 2082
   },
   {
+    "Location": "Dorsa Brevia",
+    "Latitude": -75.0,
+    "Longitude": 0.0,
+    "Description": "Hidden settlement near South pole, home of the Dorsa Brevia Conference",
+    "Book": "Green Mars",
+    "Year": 2085
+  },
+  {
+    "Location": "Gamete",
+    "Latitude": -83.0,
+    "Longitude": 45.0,
+    "Description": "Zygote renamed, Hiroko's hidden community",
+    "Book": "Green Mars",
+    "Year": 2085
+  },
+  {
+    "Location": "Overhangs",
+    "Latitude": -79.0,
+    "Longitude": -30.0,
+    "Description": "Swiss settlement, part of the underground, shot down by UNTA",
+    "Book": "Green Mars",
+    "Year": 2087
+  },
+  {
+    "Location": "Christianopolis",
+    "Latitude": -78.0,
+    "Longitude": 30.0,
+    "Description": "Near South pole, founded and populated by Christians",
+    "Book": "Green Mars",
+    "Year": 2088
+  },
+  {
+    "Location": "Gramsci",
+    "Latitude": -76.5,
+    "Longitude": -15.0,
+    "Description": "Settlement near South pole, part of the underground",
+    "Book": "Green Mars",
+    "Year": 2089
+  },
+  {
+    "Location": "Prometheus",
+    "Latitude": -80.0,
+    "Longitude": -45.0,
+    "Description": "Series of sanctuaries near South pole, occupied by Francophone utopists",
+    "Book": "Green Mars",
+    "Year": 2090
+  },
+  {
+    "Location": "Mauss Hyde",
+    "Latitude": -75.5,
+    "Longitude": 90.0,
+    "Description": "Settlement near South pole, grew plants for the underground",
+    "Book": "Green Mars",
+    "Year": 2091
+  },
+  {
+    "Location": "Rumi",
+    "Latitude": -76.0,
+    "Longitude": 60.0,
+    "Description": "Main Sufi settlement near the South pole",
+    "Book": "Green Mars",
+    "Year": 2092
+  },
+  {
+    "Location": "New Vanuatu",
+    "Latitude": -74.0,
+    "Longitude": 120.0,
+    "Description": "Near South pole, occupied by Polynesians, built inside lava tunnel",
+    "Book": "Green Mars",
+    "Year": 2095
+  },
+  {
+    "Location": "Hiranyagarbha",
+    "Latitude": -20.0,
+    "Longitude": -110.0,
+    "Description": "Rumored to have been founded by Hiroko Ai after Sabishii was burned",
+    "Book": "Green Mars",
+    "Year": 2095
+  },
+  {
+    "Location": "Deimos Station",
+    "Latitude": 0.0,
+    "Longitude": 0.0,
+    "Description": "Mining station on Mars' smaller moon Deimos",
+    "Book": "Green Mars",
+    "Year": 2095
+  },
+  {
+    "Location": "Tharsis Tholus",
+    "Latitude": 13.25,
+    "Longitude": -90.69,
+    "Description": "Intermediate-sized shield volcano, part of the demimonde",
+    "Book": "Green Mars",
+    "Year": 2098
+  },
+  {
+    "Location": "Kasei Vallis",
+    "Latitude": 24.6,
+    "Longitude": -65.0,
+    "Description": "Security center and police training camp, where Sax Russell was tortured",
+    "Book": "Green Mars",
+    "Year": 2100
+  },
+  {
+    "Location": "Hadriaca Patera",
+    "Latitude": -32.0,
+    "Longitude": 92.0,
+    "Description": "Ancient volcano, source of Dao and Niger Vallis",
+    "Book": "Green Mars",
+    "Year": 2100
+  },
+  {
+    "Location": "Da Vinci Crater",
+    "Latitude": -1.4,
+    "Longitude": -39.2,
+    "Description": "Major settlement and research center",
+    "Book": "Green Mars",
+    "Year": 2105
+  },
+  {
+    "Location": "Montepulciano",
+    "Latitude": -45.0,
+    "Longitude": -65.0,
+    "Description": "City at the Hellespontus Montes, southwest of Odessa",
+    "Book": "Green Mars",
+    "Year": 2108
+  },
+  {
     "Location": "Odessa",
     "Latitude": -42.4,
     "Longitude": -70.5,
@@ -112,10 +272,42 @@
     "Year": 2110
   },
   {
+    "Location": "Hell's Gate",
+    "Latitude": -42.0,
+    "Longitude": -70.0,
+    "Description": "Main city in Dao Vallis, at the Hellas Basin",
+    "Book": "Green Mars",
+    "Year": 2112
+  },
+  {
+    "Location": "Sukhumi",
+    "Latitude": -41.0,
+    "Longitude": -65.0,
+    "Description": "Main city in Harmakhis-Reull system at Hellas Basin",
+    "Book": "Green Mars",
+    "Year": 2115
+  },
+  {
+    "Location": "Harmakhis Vallis",
+    "Latitude": -38.5,
+    "Longitude": -95.5,
+    "Description": "Huge tented canyon system with river ecosystem",
+    "Book": "Green Mars",
+    "Year": 2118
+  },
+  {
     "Location": "Nirgal Vallis",
     "Latitude": -28.4,
     "Longitude": -42.0,
     "Description": "Huge tenting over an entire canyon, a long river channel",
+    "Book": "Green Mars",
+    "Year": 2120
+  },
+  {
+    "Location": "Reull Vallis",
+    "Latitude": -41.0,
+    "Longitude": -101.0,
+    "Description": "Canyon system intersecting with Harmakhis Vallis",
     "Book": "Green Mars",
     "Year": 2120
   },
@@ -144,12 +336,116 @@
     "Year": 2140
   },
   {
-    "Location": "Vastitas Borealis",
-    "Latitude": 70.0,
-    "Longitude": 0.0,
-    "Description": "Northern ocean settlement, major port city",
+    "Location": "Ascraeus Mons",
+    "Latitude": 11.9,
+    "Longitude": -104.5,
+    "Description": "Northern volcano of Tharsis Montes, major settlement",
     "Book": "Blue Mars",
-    "Year": 2180
+    "Year": 2145
+  },
+  {
+    "Location": "Arsia Mons",
+    "Latitude": -9.0,
+    "Longitude": -121.0,
+    "Description": "Southern volcano of Tharsis Montes, terraforming center",
+    "Book": "Blue Mars",
+    "Year": 2150
+  },
+  {
+    "Location": "Isidis Planitia",
+    "Latitude": 12.0,
+    "Longitude": 87.0,
+    "Description": "Impact basin where Burroughs is located",
+    "Book": "Blue Mars",
+    "Year": 2150
+  },
+  {
+    "Location": "Elysium",
+    "Latitude": 25.0,
+    "Longitude": 147.0,
+    "Description": "Settlement on Elysium Mons, second major volcanic region",
+    "Book": "Blue Mars",
+    "Year": 2155
+  },
+  {
+    "Location": "Alba Patera",
+    "Latitude": 40.0,
+    "Longitude": -110.0,
+    "Description": "Largest volcano by area, low shield volcano",
+    "Book": "Blue Mars",
+    "Year": 2155
+  },
+  {
+    "Location": "Mangala",
+    "Latitude": -5.0,
+    "Longitude": -150.0,
+    "Description": "Major city in the Amazonis region, cultural center",
+    "Book": "Blue Mars",
+    "Year": 2160
+  },
+  {
+    "Location": "Chryse Planitia",
+    "Latitude": 22.0,
+    "Longitude": -50.0,
+    "Description": "Northern plains settlement, Viking 1 landing site memorial",
+    "Book": "Blue Mars",
+    "Year": 2165
+  },
+  {
+    "Location": "Syrtis Major",
+    "Latitude": 8.0,
+    "Longitude": 69.0,
+    "Description": "Dark albedo feature, major landmark and settlement area",
+    "Book": "Blue Mars",
+    "Year": 2165
+  },
+  {
+    "Location": "Gusev Crater",
+    "Latitude": -14.5,
+    "Longitude": 175.5,
+    "Description": "Spirit rover landing site, memorial and settlement",
+    "Book": "Blue Mars",
+    "Year": 2165
+  },
+  {
+    "Location": "Meridiani Planum",
+    "Latitude": -2.0,
+    "Longitude": 354.0,
+    "Description": "Opportunity rover region, hematite deposits",
+    "Book": "Blue Mars",
+    "Year": 2168
+  },
+  {
+    "Location": "Margaritifer Sinus",
+    "Latitude": -15.0,
+    "Longitude": -25.0,
+    "Description": "Ancient impact basin, now a major agricultural region",
+    "Book": "Blue Mars",
+    "Year": 2170
+  },
+  {
+    "Location": "Holden Crater",
+    "Latitude": -26.0,
+    "Longitude": -34.0,
+    "Description": "Ancient lake bed, major archaeological site",
+    "Book": "Blue Mars",
+    "Year": 2170
+  },
+  {
+    "Location": "Noctis Labyrinthus",
+    "Latitude": -7.0,
+    "Longitude": -100.0,
+    "Description": "Maze of canyons west of Valles Marineris, major settlement area",
+    "Book": "Blue Mars",
+    "Year": 2172
+  },
+  {
+    "Location": "Jezero Crater",
+    "Latitude": 18.4,
+    "Longitude": 77.5,
+    "Description": "Perseverance rover site, ancient river delta",
+    "Book": "Blue Mars",
+    "Year": 2172
   },
   {
     "Location": "Valles Marineris",
@@ -158,5 +454,205 @@
     "Description": "Grand canyon of Mars, multiple settlements along its length",
     "Book": "Blue Mars",
     "Year": 2175
+  },
+  {
+    "Location": "Mariner Valley",
+    "Latitude": -14.0,
+    "Longitude": -59.0,
+    "Description": "Alternative name for Valles Marineris, grand canyon system",
+    "Book": "Blue Mars",
+    "Year": 2175
+  },
+  {
+    "Location": "Schiaparelli",
+    "Latitude": -3.0,
+    "Longitude": 16.0,
+    "Description": "Major crater settlement, named after Italian astronomer",
+    "Book": "Blue Mars",
+    "Year": 2175
+  },
+  {
+    "Location": "Promethei Terra",
+    "Latitude": -60.0,
+    "Longitude": -90.0,
+    "Description": "Southern highland region near Hellas",
+    "Book": "Blue Mars",
+    "Year": 2175
+  },
+  {
+    "Location": "Coprates Chasma",
+    "Latitude": -13.0,
+    "Longitude": -61.0,
+    "Description": "Central section of Valles Marineris, major canyon settlement",
+    "Book": "Blue Mars",
+    "Year": 2178
+  },
+  {
+    "Location": "Ius Chasma",
+    "Latitude": -7.0,
+    "Longitude": -85.0,
+    "Description": "Western section of Valles Marineris canyon system",
+    "Book": "Blue Mars",
+    "Year": 2180
+  },
+  {
+    "Location": "Vastitas Borealis",
+    "Latitude": 70.0,
+    "Longitude": 0.0,
+    "Description": "Northern ocean settlement, major port city",
+    "Book": "Blue Mars",
+    "Year": 2180
+  },
+  {
+    "Location": "Lowell",
+    "Latitude": -52.0,
+    "Longitude": -81.0,
+    "Description": "Research station named after astronomer Percival Lowell",
+    "Book": "Blue Mars",
+    "Year": 2180
+  },
+  {
+    "Location": "Noachis Terra",
+    "Latitude": -45.0,
+    "Longitude": 350.0,
+    "Description": "Ancient southern highlands, historical preservation area",
+    "Book": "Blue Mars",
+    "Year": 2180
+  },
+  {
+    "Location": "Melas Chasma",
+    "Latitude": -10.0,
+    "Longitude": -72.0,
+    "Description": "Widest part of Valles Marineris, major population center",
+    "Book": "Blue Mars",
+    "Year": 2182
+  },
+  {
+    "Location": "Candor Chasma",
+    "Latitude": -6.0,
+    "Longitude": -75.0,
+    "Description": "Northern branch of Valles Marineris, terraforming center",
+    "Book": "Blue Mars",
+    "Year": 2185
+  },
+  {
+    "Location": "Argyre Planitia",
+    "Latitude": -50.0,
+    "Longitude": -43.0,
+    "Description": "Southern impact basin, major agricultural and residential area",
+    "Book": "Blue Mars",
+    "Year": 2185
+  },
+  {
+    "Location": "Huygens",
+    "Latitude": -14.0,
+    "Longitude": 55.0,
+    "Description": "Crater settlement in Terra Sabaea region",
+    "Book": "Blue Mars",
+    "Year": 2185
+  },
+  {
+    "Location": "Arabia Terra",
+    "Latitude": 20.0,
+    "Longitude": 10.0,
+    "Description": "Large highland region, major population center",
+    "Book": "Blue Mars",
+    "Year": 2185
+  },
+  {
+    "Location": "Ophir Chasma",
+    "Latitude": -4.0,
+    "Longitude": -72.0,
+    "Description": "Northern canyon of Valles Marineris system",
+    "Book": "Blue Mars",
+    "Year": 2187
+  },
+  {
+    "Location": "Cimmeria Terra",
+    "Latitude": -30.0,
+    "Longitude": 145.0,
+    "Description": "Dark highland region, major settlement area",
+    "Book": "Blue Mars",
+    "Year": 2188
+  },
+  {
+    "Location": "Tithonium Chasma",
+    "Latitude": -5.0,
+    "Longitude": -84.0,
+    "Description": "Northwestern section of Valles Marineris",
+    "Book": "Blue Mars",
+    "Year": 2190
+  },
+  {
+    "Location": "New Singapore",
+    "Latitude": 35.0,
+    "Longitude": 158.0,
+    "Description": "Major trading port in Elysium region",
+    "Book": "Blue Mars",
+    "Year": 2190
+  },
+  {
+    "Location": "Tempe Terra",
+    "Latitude": 40.0,
+    "Longitude": -70.0,
+    "Description": "Highland region, major agricultural terraces",
+    "Book": "Blue Mars",
+    "Year": 2190
+  },
+  {
+    "Location": "Solis Planum",
+    "Latitude": -25.0,
+    "Longitude": -90.0,
+    "Description": "Plateau region south of Valles Marineris",
+    "Book": "Blue Mars",
+    "Year": 2192
+  },
+  {
+    "Location": "Amazonis Planitia",
+    "Latitude": 15.0,
+    "Longitude": -158.0,
+    "Description": "Northern plains region, major agricultural area",
+    "Book": "Blue Mars",
+    "Year": 2195
+  },
+  {
+    "Location": "Cassini",
+    "Latitude": 24.0,
+    "Longitude": 328.0,
+    "Description": "Northern crater settlement and research center",
+    "Book": "Blue Mars",
+    "Year": 2195
+  },
+  {
+    "Location": "Xanthe Terra",
+    "Latitude": 15.0,
+    "Longitude": -45.0,
+    "Description": "Ancient highland region, wine country",
+    "Book": "Blue Mars",
+    "Year": 2195
+  },
+  {
+    "Location": "Acidalia Planitia",
+    "Latitude": 45.0,
+    "Longitude": -22.0,
+    "Description": "Northern lowlands, part of the great northern ocean",
+    "Book": "Blue Mars",
+    "Year": 2200
+  },
+  {
+    "Location": "Galle Crater",
+    "Latitude": -51.0,
+    "Longitude": -31.0,
+    "Description": "The 'Happy Face' crater, popular tourist destination",
+    "Book": "Blue Mars",
+    "Year": 2200
+  },
+  {
+    "Location": "Utopia Planitia",
+    "Latitude": 50.0,
+    "Longitude": 117.0,
+    "Description": "Large northern plain, Viking 2 landing site region",
+    "Book": "Blue Mars",
+    "Year": 2205
   }
 ]

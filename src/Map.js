@@ -107,9 +107,6 @@ const Map = ({ locations, onError, showInfrastructure = true, currentYear = 2200
               <h4>{waterBody.name}</h4>
               <p><strong>År:</strong> {waterLevel.year}</p>
               <p><strong>Vattennivå:</strong> {waterLevel.waterLevel}m</p>
-              {waterBody.elevation && (
-                <p><strong>Bassängens djup:</strong> {waterBody.elevation}m</p>
-              )}
               <p>{waterLevel.description}</p>
             </div>
           </Popup>

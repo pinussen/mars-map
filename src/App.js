@@ -100,10 +100,7 @@ function App() {
           {currentYear !== 2061 && currentWaterLevel.description}
           {currentWaterLevel.waterLevel && currentWaterLevel.waterLevel > -10000 && (
             <div className="water-level-info">
-              Vattennivå: {currentWaterLevel.waterLevel}m höjd
-              {currentWaterLevel.waterBodies.length > 0 && (
-                <span> • {currentWaterLevel.waterBodies.length} vattenmassa{currentWaterLevel.waterBodies.length > 1 ? 'or' : 'a'}</span>
-              )}
+              Terraforming-nivå: {Math.round(((currentWaterLevel.waterLevel + 10000) / 9000) * 100)}% komplett
             </div>
           )}
         </div>
@@ -150,12 +147,8 @@ function App() {
           <div className="legend-color" style={{backgroundColor: '#4444ff'}}></div>
           Blue Mars
         </div>
-        <div className="legend-item-compact">
-          <div className="legend-color" style={{backgroundColor: '#4A90E2'}}></div>
-          Vatten
-        </div>
         <div className="legend-note">
-          <small>Vatten fyller områden under aktuell höjdnivå</small>
+          <small>Terraforming-processen 2027-2200</small>
         </div>
       </div>
     </div>

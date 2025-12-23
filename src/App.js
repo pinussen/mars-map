@@ -89,18 +89,21 @@ function App() {
             className="time-slider"
           />
           <div className="time-markers">
-            <span>2027</span>
-            <span className="war-marker">2061 ⚔️</span>
-            <span>2127</span>
-            <span>2200</span>
+            <span style={{position: 'absolute', left: '0%'}}>2027</span>
+            <span className="war-marker" style={{position: 'absolute', left: '19.7%'}}>2061 ⚔️</span>
+            <span style={{position: 'absolute', left: '57.8%'}}>2127</span>
+            <span style={{position: 'absolute', left: '100%', transform: 'translateX(-100%)'}}>2200</span>
           </div>
         </div>
         <div className="terraforming-status">
-          {currentYear === 2061 && "🔥 First Martian Revolution - Space Elevator Falls"}
+          {currentYear === 2061 && "🔥 Första Mars-revolutionen - Rymdelevatorn faller"}
           {currentYear !== 2061 && currentWaterLevel.description}
-          {currentWaterLevel.waterLevel && (
+          {currentWaterLevel.waterLevel && currentWaterLevel.waterLevel > -10000 && (
             <div className="water-level-info">
-              Water Level: {currentWaterLevel.waterLevel}m elevation
+              Vattennivå: {currentWaterLevel.waterLevel}m höjd
+              {currentWaterLevel.waterBodies.length > 0 && (
+                <span> • {currentWaterLevel.waterBodies.length} vattenmassa{currentWaterLevel.waterBodies.length > 1 ? 'or' : 'a'}</span>
+              )}
             </div>
           )}
         </div>
@@ -149,7 +152,10 @@ function App() {
         </div>
         <div className="legend-item-compact">
           <div className="legend-color" style={{backgroundColor: '#4A90E2'}}></div>
-          Water
+          Vatten
+        </div>
+        <div className="legend-note">
+          <small>Vatten fyller områden under aktuell höjdnivå</small>
         </div>
       </div>
     </div>

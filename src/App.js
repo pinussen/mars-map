@@ -98,6 +98,11 @@ function App() {
         <div className="terraforming-status">
           {currentYear === 2061 && "🔥 First Martian Revolution - Space Elevator Falls"}
           {currentYear !== 2061 && currentWaterLevel.description}
+          {currentWaterLevel.waterLevel && (
+            <div className="water-level-info">
+              Water Level: {currentWaterLevel.waterLevel}m elevation
+            </div>
+          )}
         </div>
       </div>
       

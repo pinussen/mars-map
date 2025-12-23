@@ -122,6 +122,13 @@
   font-style: italic;
 }
 
+.water-level-info {
+  font-size: 10px;
+  color: #FFD700;
+  margin-top: 4px;
+  font-weight: bold;
+}
+
 /* Compact controls overlay */
 .controls-overlay {
   position: absolute;

@@ -1,0 +1,67 @@
+{
+  "elevationLevels": {
+    "datum": 0,
+    "description": "Mars datum level (approximately 610.5 Pa atmospheric pressure)",
+    "waterLevels": [
+      {
+        "level": -8000,
+        "description": "Deepest basins - Hellas, Argyre, Isidis",
+        "areas": ["Hellas Planitia", "Argyre Planitia", "Isidis Planitia"]
+      },
+      {
+        "level": -6000,
+        "description": "Deep northern lowlands",
+        "areas": ["Vastitas Borealis", "Acidalia Planitia", "Utopia Planitia"]
+      },
+      {
+        "level": -4000,
+        "description": "Northern plains and major valleys",
+        "areas": ["Chryse Planitia", "Amazonis Planitia", "Valles Marineris floor"]
+      },
+      {
+        "level": -2000,
+        "description": "Lower highlands and canyon systems",
+        "areas": ["Parts of Valles Marineris", "Margaritifer Sinus"]
+      },
+      {
+        "level": 0,
+        "description": "Mars datum level",
+        "areas": ["Transition zones"]
+      },
+      {
+        "level": 2000,
+        "description": "Highland plateaus",
+        "areas": ["Terra regions", "Crater rims"]
+      },
+      {
+        "level": 4000,
+        "description": "High volcanic regions",
+        "areas": ["Tharsis region", "Elysium"]
+      },
+      {
+        "level": 21000,
+        "description": "Olympus Mons peak",
+        "areas": ["Olympus Mons summit"]
+      }
+    ]
+  },
+  "knownElevations": {
+    "Hellas Planitia": -8200,
+    "Argyre Planitia": -5200,
+    "Isidis Planitia": -4000,
+    "Vastitas Borealis": -5000,
+    "Acidalia Planitia": -4000,
+    "Utopia Planitia": -4500,
+    "Chryse Planitia": -2500,
+    "Amazonis Planitia": -1000,
+    "Valles Marineris_floor": -7000,
+    "Valles Marineris_rim": 2000,
+    "Olympus Mons": 21287,
+    "Pavonis Mons": 14057,
+    "Ascraeus Mons": 18225,
+    "Arsia Mons": 17781,
+    "Tharsis_average": 8000,
+    "Southern_highlands": 3000,
+    "Northern_lowlands": -3500
+  }
+}
